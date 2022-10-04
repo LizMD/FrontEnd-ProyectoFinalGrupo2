@@ -1,3 +1,42 @@
 /* 
     General Styles
 */
+body{
+    background: rgb(238, 231, 206);
+}
+.color1{
+    margin-left: 130px;
+}
+.efecto1:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 16px rgb(0,0,0,0.2);
+}
+.efecto2{
+    background: rgb(6,68,57);
+}
+.efecto2:active{
+    background: rgb(4, 55, 45);
+
+}
+.img{
+    margin-left: 25px;
+    margin-top: -10px;
+    height: 103px;
+    width: 250px;
+}
+.inicio{
+    background:rgb(238, 231, 206);
+    border: none;
+
+}
+.inicio:active{
+    background:rgb(191, 183, 154)
+}
+.footer{
+    background: rgb(4, 55, 45);
+    margin-top: 30px;
+
+}
+.fot{
+    color: rgb(221, 221, 221) ;
+}
