@@ -78,10 +78,10 @@ export default function SignupCard() {
               <Button
                 loadingText="Submitting"
                 size="lg"
-                bg={"green.500"}
+                bg={"green.800"}
                 color={"white"}
                 _hover={{
-                  bg: "green.800",
+                  bg: "green.500",
                 }}
               >
                 Registrarse
@@ -90,7 +90,7 @@ export default function SignupCard() {
             <Stack pt={6}>
               <Text align={"center"}>
               ¿Ya estás registrado?{" "}
-                <Link href="/logincard" color={"purple.700"}>
+                <Link href="/logincard" color={"green.700"}>
                   Inicia Sesión
                 </Link>
               </Text>

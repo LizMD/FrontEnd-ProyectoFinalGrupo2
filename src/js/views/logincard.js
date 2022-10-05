@@ -28,7 +28,7 @@ export default function LoginCard() {
       bg={useColorModeValue('gray.50', 'gray.800')}>
       <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
         <Stack align={'center'}>
-          <Heading fontSize={'4xl'}>Inicia Sesión en tu Cuenta</Heading>
+          <Heading fontSize={'4xl'}>Inicia Sesión</Heading>
         </Stack>
         <Box
           rounded={'lg'}
@@ -64,10 +64,10 @@ export default function LoginCard() {
                 <Link href="/forgotpasswordcard" color={'green.700'}>¿Olvidaste tu Contraseña?</Link>
               </Stack>
               <Button
-                bg={'green.500'}
+                bg={'green.800'}
                 color={'white'}
                 _hover={{
-                  bg: 'green.800',
+                  bg: 'green.500',
                 }}>
                 Inicia Sesión
               </Button>

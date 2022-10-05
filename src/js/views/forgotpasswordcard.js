@@ -46,10 +46,10 @@ export default function ForgotPasswordCard() {
         </FormControl>
         <Stack spacing={6}>
           <Button
-            bg={"green.500"}
+            bg={"green.800"}
             color={"white"}
             _hover={{
-              bg: "green.800",
+              bg: "green.500",
             }}
           >
           Restablecer Solicitud
