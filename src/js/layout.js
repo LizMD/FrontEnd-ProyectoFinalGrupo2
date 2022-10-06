@@ -8,6 +8,7 @@ import { Single } from "./views/single";
 import SignupCard from "./views/signupcard";
 import LoginCard from "./views/logincard";
 import ForgotPasswordCard from "./views/forgotpasswordcard";
+import NotFound from "./views/notfound";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -20,36 +21,36 @@ const Layout = () => {
   const basename = process.env.BASENAME || "";
 
   return (
-		<div>
-			<BrowserRouter basename={basename}>
-			<ScrollToTop>
-					<Switch>
-						<Route exact path="/">
-							<Home />
-						</Route>
-						<Route exact path="/demo">
-							<Demo />
-						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
-						</Route>
+    <div>
+      <BrowserRouter basename={basename}>
+        <ScrollToTop>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/demo">
+              <Demo />
+            </Route>
+            <Route exact path="/single/:theid">
+              <Single />
+            </Route>
             <Route exact path="/signupcard">
-							<SignupCard />
-						</Route>
+              <SignupCard />
+            </Route>
             <Route exact path="/logincard">
-							<LoginCard />
-						</Route>
+              <LoginCard />
+            </Route>
             <Route exact path="/forgotpasswordcard">
-							<ForgotPasswordCard />
-						</Route>
-						<Route>
-							<h1>Not found!</h1>
-						</Route>
-					</Switch>
-				</ScrollToTop>
-			</BrowserRouter>
-		</div>
-	);
+              <ForgotPasswordCard />
+            </Route>
+            <Route>
+              <NotFound />
+            </Route>
+          </Switch>
+        </ScrollToTop>
+      </BrowserRouter>
+    </div>
+  );
 };
 
 export default injectContext(Layout);
