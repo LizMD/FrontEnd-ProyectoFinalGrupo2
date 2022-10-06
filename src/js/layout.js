@@ -5,13 +5,8 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
-import SignupCard from "./views/signupcard";
-import LoginCard from "./views/logincard";
-import ForgotPasswordCard from "./views/forgotpasswordcard";
+import UserProfileEdit from "./views/userprofileedit";
 import injectContext from "./store/appContext";
-
-import { Navbar } from "./component/navbar";
-import { Footer } from "./component/footer";
 
 //create your first component
 const Layout = () => {
@@ -33,14 +28,8 @@ const Layout = () => {
 						<Route exact path="/single/:theid">
 							<Single />
 						</Route>
-            <Route exact path="/signupcard">
-							<SignupCard />
-						</Route>
-            <Route exact path="/logincard">
-							<LoginCard />
-						</Route>
-            <Route exact path="/forgotpasswordcard">
-							<ForgotPasswordCard />
+            <Route exact path="/userprofileedit">
+							<UserProfileEdit />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>
