@@ -1,6 +1,11 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			usuarios:[
+				{
+					active:true
+				}
+			],
 			demo: [
 				{
 					title: "FIRST",
@@ -15,9 +20,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
+
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
+			},
+			cerrar:(index)=>{
+				const store = getStore();
+				console.log(store.usuarios[index].active)
+
+				
+				
 			},
 			loadSomeData: () => {
 				/**
