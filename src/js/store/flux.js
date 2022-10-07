@@ -27,8 +27,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			cerrar:()=>{
 				const store = getStore();
-				const usuario=store.usuario.active===false
-				setStore({usuario:usuario})
+				
+				setStore({usuario:{...store.usuario,active:false}})
 
 				console.log(store.usuarios[index].active)
 
