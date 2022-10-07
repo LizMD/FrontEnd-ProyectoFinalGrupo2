@@ -6,6 +6,8 @@ import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import UserProfileEdit from "./views/userprofileedit";
+import { Medicos } from "./views/medicos";
+
 import injectContext from "./store/appContext";
 
 //create your first component
@@ -21,6 +23,9 @@ const Layout = () => {
 					<Switch>
 						<Route exact path="/">
 							<Home />
+						</Route>
+						<Route exact path="/Medicos">
+							<Medicos />
 						</Route>
 						<Route exact path="/demo">
 							<Demo />
