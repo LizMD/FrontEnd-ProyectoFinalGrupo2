@@ -17,22 +17,15 @@ export const Navbar = () => {
 
 			</Link>
 			<div className="ml-auto">
-				{store.usuarios.map((obj, index) => {
-					if (obj.active == false) {
-						return (
+			{store.usuario.active==true?(
+							<Link to="/Inicio">
+								<button className="btn inicio " style={{ marginRight: "130px",width:"150px" }} onClick={()=>actions.cerrar()}>Cerrar sesion</button>
+							</Link>): (
 							<Link to="/Registro">
-								<button className="btn inicio " style={{ marginRight: "130px",width:"150px" }}>Iniciar sesion/Registrate</button>
-							</Link>)
-					}
-					else {
-						return (
-							<Link to="/Registro">
-								<button className="btn inicio " style={{ marginRight: "140px",width:"150px" }} onClick={actions.cerrar(0)}>Cerrar sesion</button>
+								<button className="btn inicio " style={{ marginRight: "140px",width:"150px" }} > Iniciar sesion/Registrate</button>
 							</Link>
 						)
 					}
-				})}
-
 			</div>
 		</nav>
 	);
