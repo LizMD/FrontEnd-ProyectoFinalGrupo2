@@ -1,11 +1,11 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			usuarios:[
+			usuario:
 				{
 					active:true
 				}
-			],
+			,
 			demo: [
 				{
 					title: "FIRST",
@@ -25,8 +25,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
-			cerrar:(index)=>{
+			cerrar:()=>{
 				const store = getStore();
+				
+				setStore({usuario:{...store.usuario,active:false}})
+
 				console.log(store.usuarios[index].active)
 
 				
