@@ -8,8 +8,10 @@ import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
+import { Medicos } from "./component/medicos";
 import { Footer } from "./component/footer";
 import { Agenda } from "./component/agenda";
+
 
 
 //create your first component
@@ -19,10 +21,11 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div>
+		<div style={{backgroundColor: "#fffcf6"}}>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
+					<Medicos />
 					<Switch>
 						<Route exact path="/">
 							<Home />
