@@ -9,7 +9,6 @@ import SignupCard from "./views/signupcard";
 import LoginCard from "./views/logincard";
 import ForgotPasswordCard from "./views/forgotpasswordcard";
 import NotFound from "./views/notfound";
-import { Medicos } from "./views/medicos";
 
 import injectContext from "./store/appContext";
 
@@ -33,9 +32,6 @@ const Layout = () => {
             <Route exact path="/single/:theid">
               <Single />
             </Route>
-            <Route exact path="/Medicos">
-							<Medicos />
-						</Route>
             <Route exact path="/signupcard">
               <SignupCard />
             </Route>
