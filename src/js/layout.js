@@ -4,11 +4,15 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
+import { Navbar } from "./component/navbar";
+import { Footer } from "./component/footer";
 import { Single } from "./views/single";
 import SignupCard from "./views/signupcard";
 import LoginCard from "./views/logincard";
 import ForgotPasswordCard from "./views/forgotpasswordcard";
 import NotFound from "./views/notfound";
+import UserProfileEdit from "./views/userprofileedit";
+import { Medicos } from "./views/medicos";
 
 import injectContext from "./store/appContext";
 
@@ -22,6 +26,7 @@ const Layout = () => {
     <div>
       <BrowserRouter basename={basename}>
         <ScrollToTop>
+          <Navbar />
           <Switch>
             <Route exact path="/">
               <Home />
@@ -32,6 +37,9 @@ const Layout = () => {
             <Route exact path="/single/:theid">
               <Single />
             </Route>
+            <Route exact path="/Medicos">
+							<Medicos />
+						</Route>
             <Route exact path="/signupcard">
               <SignupCard />
             </Route>
@@ -41,10 +49,14 @@ const Layout = () => {
             <Route exact path="/forgotpasswordcard">
               <ForgotPasswordCard />
             </Route>
+            <Route exact path="/userprofileedit">
+							<UserProfileEdit />
+						</Route>
             <Route>
               <NotFound />
             </Route>
           </Switch>
+          <Footer />
         </ScrollToTop>
       </BrowserRouter>
     </div>
