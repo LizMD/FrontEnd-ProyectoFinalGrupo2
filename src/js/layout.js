@@ -4,7 +4,13 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
+import { Navbar } from "./component/navbar";
+import { Footer } from "./component/footer";
 import { Single } from "./views/single";
+import SignupCard from "./views/signupcard";
+import LoginCard from "./views/logincard";
+import ForgotPasswordCard from "./views/forgotpasswordcard";
+import NotFound from "./views/notfound";
 import UserProfileEdit from "./views/userprofileedit";
 import { Medicos } from "./views/medicos";
 
@@ -17,33 +23,44 @@ const Layout = () => {
   const basename = process.env.BASENAME || "";
 
   return (
-		<div>
-			<BrowserRouter basename={basename}>
-			<ScrollToTop>
-					<Switch>
-						<Route exact path="/">
-							<Home />
-						</Route>
-						<Route exact path="/Medicos">
+    <div>
+      <BrowserRouter basename={basename}>
+        <ScrollToTop>
+          <Navbar />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/demo">
+              <Demo />
+            </Route>
+            <Route exact path="/single/:theid">
+              <Single />
+            </Route>
+            <Route exact path="/Medicos">
 							<Medicos />
 						</Route>
-						<Route exact path="/demo">
-							<Demo />
-						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
-						</Route>
+            <Route exact path="/signupcard">
+              <SignupCard />
+            </Route>
+            <Route exact path="/logincard">
+              <LoginCard />
+            </Route>
+            <Route exact path="/forgotpasswordcard">
+              <ForgotPasswordCard />
+            </Route>
             <Route exact path="/userprofileedit">
 							<UserProfileEdit />
 						</Route>
-						<Route>
-							<h1>Not found!</h1>
-						</Route>
-					</Switch>
-				</ScrollToTop>
-			</BrowserRouter>
-		</div>
-	);
+            <Route>
+              <NotFound />
+            </Route>
+          </Switch>
+          <Footer />
+        </ScrollToTop>
+      </BrowserRouter>
+    </div>
+  );
 };
 
 export default injectContext(Layout);

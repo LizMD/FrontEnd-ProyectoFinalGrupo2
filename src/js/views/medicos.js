@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import { CardMedicos } from "../component/cardMedicos";
 import { Context } from "../store/appContext";
-import { CardMedicos2 } from "../component/cardMedicos2";
 
 export const Medicos=()=>{
 
