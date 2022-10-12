@@ -19,6 +19,7 @@ export const Home = () => (
     </div>
     <div className="carousel-item">
     <img src={carru2} className="d-block w-100" alt="..." />
+    <p>hola</p>
     </div>
     <div className="carousel-item">
     <img src={carru3} className="d-block w-100" alt="..." />
