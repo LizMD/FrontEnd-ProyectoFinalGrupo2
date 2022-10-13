@@ -8,7 +8,8 @@ import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
-import { Medicos } from "./component/medicos";
+import { Carru } from "./component/carru";
+import { Especie } from "./component/especie";
 import { Footer } from "./component/footer";
 import { Agenda } from "./component/agenda";
 
@@ -25,19 +26,21 @@ const Layout = () => {
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
-					<Medicos />
+					<Especie />
 					<Switch>
 						<Route exact path="/">
 							<Home />
 						</Route>
-						<Route exact path="/demo">
+						<Route exact path="/registro">
+							<Demo />
+						</Route>
+						<Route exact path="/especies">
 							<Demo />
 						</Route>
 						<Route exact path="/single/:theid">
 							<Single />
 						</Route>
 						<Route>
-							<h1>Not found!</h1>
 						</Route>
 					</Switch>
 					<Agenda />

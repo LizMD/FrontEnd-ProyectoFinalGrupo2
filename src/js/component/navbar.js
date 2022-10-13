@@ -1,68 +1,51 @@
 import React from "react";
+import { Context } from "../store/appContext"
 import logo from "../../img/logopequeño.jpg";
 import { Link } from "react-router-dom";
+
 export const Navbar = () => {
   return (
     <nav
       className="navbar navbar-expand-lg navbar-success"
       style={{ backgroundColor: "#064439" }}
     >
-      <div className="container-fluid">
-        <div className="justify-content-start">
+      <div className="container-fluid" >
+        <div className="justify-content-start" style={{ marginLeft: "80px" }}>
+        <Link to="/">
           <button
             type="button"
             className="btn btn-sm fw-bold"
             style={{ backgroundColor: "#eee7ce" }}
           >
-            Home
+            Inicio
           </button>
+          </Link>
         </div>
         <div className="justify-content-center">
-        <div class="container">
+        <div class="container" style={{ marginLeft: "100px", marginTop: "5px" }}>
           <div class="row">
             <div class="col-3">
               <img
                 src={logo}
-                className="rounded mx-auto d-block"
+                className="rounded mx-auto d-block rounded-3 border border-2"
                 alt="..."
-                width={80}
+                width={40}
               />
             </div>
             <div className="col-9 text-white d-flex align-items-center">Bienetar Centro Medico</div>
           </div>
           </div>
         </div>
-        <div className="justify-content-end">
-          <div class="btn-group dropstart">
-            <button
-              type="button"
-              className="btn dropdown-toggle fw-bold" style={{ backgroundColor: "#eee7ce" }}
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              login/registro
-            </button>
-            <ul
-              className="dropdown-menu"
-              aria-labelledby="navbarDropdownMenuLink"
-            >
-              <li>
-                <a className="dropdown-item" href="#">
-                  Inicio
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Registrarse
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Recuperar Contraseña
-                </a>
-              </li>
-            </ul>
-          </div>
+        <div className="justify-content-end" style={{ marginRight: "80px" }}>
+        <Link to="/Registro">
+        <button
+            type="button"
+            className="btn btn-sm fw-bold"
+            style={{ backgroundColor: "#eee7ce" }}
+          >
+            Iniciar sesion/Registrate
+          </button>
+          </Link>
         </div>
       </div>
     </nav>

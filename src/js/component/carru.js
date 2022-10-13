@@ -5,7 +5,7 @@ import carru3 from "../../img/carru3.jpg"
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 
-export const Home = () => (
+export const Carru = () => (
 	<div className="text-center mt-5">
 		<div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
   <div className="carousel-indicators">
@@ -18,7 +18,7 @@ export const Home = () => (
       <img src={carru1} className="d-block w-90" alt="..." />
     </div>
     <div className="carousel-item">
-    <img src={carru2} className="d-block w-100" alt="..." />npm 
+    <img src={carru2} className="d-block w-100" alt="..." />
     </div>
     <div className="carousel-item">
     <img src={carru3} className="d-block w-100" alt="..." />
