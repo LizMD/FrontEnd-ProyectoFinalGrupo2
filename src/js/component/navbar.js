@@ -39,17 +39,32 @@ export const Navbar = () => {
               >
                 <li>
                   <button className="dropdown-item" type="button">
-                    Action
+                    Cirujano Plastico
                   </button>
                 </li>
                 <li>
                   <button className="dropdown-item" type="button">
-                    Another action
+                    Dermatologo
                   </button>
                 </li>
                 <li>
                   <button className="dropdown-item" type="button">
-                    Something else here
+                    Pediatra
+                  </button>
+                </li>
+                <li>
+                  <button className="dropdown-item" type="button">
+                    Odontología
+                  </button>
+                </li>
+                <li>
+                  <button className="dropdown-item" type="button">
+                  kinesiología
+                  </button>
+                </li>
+                <li>
+                  <button className="dropdown-item" type="button">
+                  Traumatología
                   </button>
                 </li>
               </ul>

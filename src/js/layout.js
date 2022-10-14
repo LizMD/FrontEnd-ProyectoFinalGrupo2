@@ -12,7 +12,7 @@ import { Carru } from "./component/carru";
 import { Footer } from "./component/footer";
 import { Agenda } from "./component/agenda";
 import { Medicos } from "./component/medicos";
-import { Cardmedicos } from "./component/cardmedicos";
+
 
 
 

@@ -40,7 +40,7 @@ export const Agenda = () => (
         />
       </div>
       <div className="col" style={{ backgroundColor: "#eee7ce" }}>
-        <div className="text-center" style={{ marginTop: "5px" }}>
+        <div className="text-center fw-bold" style={{ marginTop: "5px" }}>
           <h1>Redes Sociales</h1>
         </div>
         <br></br>
@@ -55,26 +55,23 @@ export const Agenda = () => (
               />
             </div>
             <div className="col-4 justify-content-start">
-              <h5>Facebook</h5>
+            <a href="#" className="card-link fw-bold">Facebook</a>
             </div>
             <div className="col-2">
-            <i class="fa-brands fa-instagram"></i>
+            <img
+                src={Inst}
+                className="rounded mx-auto d-block"
+                alt="..."
+                width={20}
+              />
             </div>
             <div className="col-4">
-              <h5>Instagram</h5>
+            <a href="#" className="card-link fw-bold">Instagram</a>
             </div>
           </div>
-        </div>
-        <br></br>
-        <div className="container">
+          <br></br>
           <div className="row align-items-start">
             <div className="col-2 justify-content-end">
-            <i className="fa fa-instagram" aria-hidden="true"></i>
-            </div>
-            <div className="col-4 justify-content-start">
-              <h5>Twiter</h5>
-            </div>
-            <div className="col-2">
               <img
                 src={Twi}
                 className="rounded mx-auto d-block"
@@ -82,11 +79,24 @@ export const Agenda = () => (
                 width={20}
               />
             </div>
+            <div className="col-4 justify-content-start">
+            <a href="#" className="card-link fw-bold">Twiter</a>
+            </div>
+            <div className="col-2">
+            <img
+                src={Tele}
+                className="rounded mx-auto d-block"
+                alt="..."
+                width={20}
+              />
+            </div>
             <div className="col-4">
-              <h5>Telegram</h5>
+            <a href="#" className="card-link fw-bold">Telegram</a>
             </div>
           </div>
         </div>
+        <br></br>
+        
       </div>
     </div>
   </div>
