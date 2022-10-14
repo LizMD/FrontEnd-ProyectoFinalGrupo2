@@ -1,5 +1,5 @@
 import React from "react";
-import { Context } from "../store/appContext"
+import { Context } from "../store/appContext";
 import logo from "../../img/logopequeño.jpg";
 import { Link } from "react-router-dom";
 
@@ -9,42 +9,79 @@ export const Navbar = () => {
       className="navbar navbar-expand-lg navbar-success"
       style={{ backgroundColor: "#064439" }}
     >
-      <div className="container-fluid" >
+      <div className="container-fluid">
         <div className="justify-content-start" style={{ marginLeft: "80px" }}>
-        <Link to="/">
-          <button
-            type="button"
-            className="btn btn-sm fw-bold"
-            style={{ backgroundColor: "#eee7ce" }}
-          >
-            Inicio
-          </button>
+          <Link to="/">
+            <button
+              type="button"
+              className="btn btn-sm fw-bold"
+              style={{ backgroundColor: "#eee7ce" }}
+            >
+              Inicio
+            </button>
+          </Link>
+          <Link to="/medicos">
+            
+              <button 
+                type="button"
+                className="dropdown btn btn-sm fw-bold"
+                style={{ backgroundColor: "#eee7ce", marginLeft: "10px" }}
+                id="dropdownMenu2"
+                data-bs-toggle="dropdown"
+                aria-expanded="true"
+              >
+                Especialidades
+              </button>
+              <ul
+                className="dropdown-menu"
+                aria-labelledby="dropdownMenu2"
+                style={{ backgroundColor: "#eee7ce" }}
+              >
+                <li>
+                  <button className="dropdown-item" type="button">
+                    Action
+                  </button>
+                </li>
+                <li>
+                  <button className="dropdown-item" type="button">
+                    Another action
+                  </button>
+                </li>
+                <li>
+                  <button className="dropdown-item" type="button">
+                    Something else here
+                  </button>
+                </li>
+              </ul>
+            
           </Link>
         </div>
         <div className="justify-content-center">
-        <div class="container" style={{ marginLeft: "100px", marginTop: "5px" }}>
-          <div class="row">
-            <div class="col-3">
-              <img
-                src={logo}
-                className="rounded mx-auto d-block rounded-3 border border-2"
-                alt="..."
-                width={40}
-              />
+          <div className="container" style={{ marginLeft: "100px" }}>
+            <div className="row">
+              <div className="col-3">
+                <img
+                  src={logo}
+                  className="rounded mx-auto d-block rounded-3 border border-2"
+                  alt="..."
+                  width={30}
+                />
+              </div>
+              <div className="col-9 text-white d-flex align-items-center">
+                Bienetar Centro Medico
+              </div>
             </div>
-            <div className="col-9 text-white d-flex align-items-center">Bienetar Centro Medico</div>
-          </div>
           </div>
         </div>
         <div className="justify-content-end" style={{ marginRight: "80px" }}>
-        <Link to="/Registro">
-        <button
-            type="button"
-            className="btn btn-sm fw-bold"
-            style={{ backgroundColor: "#eee7ce" }}
-          >
-            Iniciar sesion/Registrate
-          </button>
+          <Link to="/Registro">
+            <button
+              type="button"
+              className="btn btn-sm fw-bold"
+              style={{ backgroundColor: "#eee7ce" }}
+            >
+              Iniciar sesion/Registrate
+            </button>
           </Link>
         </div>
       </div>

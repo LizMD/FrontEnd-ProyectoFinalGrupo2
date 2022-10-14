@@ -18,7 +18,7 @@ export const Home = () => (
       <img src={carru1} className="d-block w-90" alt="..." />
     </div>
     <div className="carousel-item">
-    <img src={carru2} className="d-block w-100" alt="..." />npm 
+    <img src={carru2} className="d-block w-100" alt="..." />
     </div>
     <div className="carousel-item">
     <img src={carru3} className="d-block w-100" alt="..." />

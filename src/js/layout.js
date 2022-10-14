@@ -9,9 +9,10 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Carru } from "./component/carru";
-import { Especie } from "./component/especie";
 import { Footer } from "./component/footer";
 import { Agenda } from "./component/agenda";
+import { Medicos } from "./component/medicos";
+import { CardMedicos } from "./component/cardmedicos";
 
 
 
@@ -26,7 +27,6 @@ const Layout = () => {
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
-					<Especie />
 					<Switch>
 						<Route exact path="/">
 							<Home />
@@ -34,8 +34,8 @@ const Layout = () => {
 						<Route exact path="/registro">
 							<Demo />
 						</Route>
-						<Route exact path="/especies">
-							<Demo />
+						<Route exact path="/medicos">
+							<Medicos />
 						</Route>
 						<Route exact path="/single/:theid">
 							<Single />
