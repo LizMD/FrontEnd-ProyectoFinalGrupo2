@@ -15,11 +15,24 @@ import {
   InputGroup,
   InputRightElement,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { Context } from "../store/appContext"
+import { useState ,useContext} from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 export default function LoginCard() {
+  const { store, actions } = useContext(Context);
   const [showPassword, setShowPassword] = useState(false);
+  const [usuario, setUsuario] = useState({
+    email: "",
+    password: ""
+  })
+  const aa = (e) => {
+    setUsuario({
+      ...usuario,
+      [e.target.name]: e.target.value
+    })
+
+  }
   return (
     <Flex
       minH={'100vh'}
@@ -35,15 +48,15 @@ export default function LoginCard() {
           bg={useColorModeValue('white', 'gray.700')}
           boxShadow={'lg'}
           p={8}>
-          <Stack spacing={4}>
-            <FormControl id="email">
-              <FormLabel>Dirección de Email</FormLabel>
-              <Input type="email" />
+          <Stack spacing={4} >
+            <FormControl id="email" >
+              <FormLabel >Dirección de Email</FormLabel>
+              <Input type="email" name="email" onChange={aa} />
             </FormControl>
-            <FormControl id="password">
+            <FormControl id="password" name="password">
               <FormLabel>Contraseña</FormLabel>
               <InputGroup>
-                <Input type={showPassword ? "text" : "password"} />
+                <Input type={showPassword ? "text" : "password"} onChange={aa} name="password" />
                 <InputRightElement h={"full"}>
                   <Button
                     variant={"ghost"}
@@ -51,7 +64,7 @@ export default function LoginCard() {
                       setShowPassword((showPassword) => !showPassword)
                     }>
                     {showPassword ? <Text fontSize='md'><AiFillEye /></Text> : <Text fontSize='md'><AiFillEyeInvisible /></Text>}
-                    </Button> 
+                  </Button>
                 </InputRightElement>
               </InputGroup>
             </FormControl>
@@ -63,7 +76,14 @@ export default function LoginCard() {
                 <Checkbox>Recuérdame</Checkbox>
                 <Link href="/forgotpasswordcard" color={'green.700'}>¿Olvidaste tu Contraseña?</Link>
               </Stack>
-              <Button
+              <Button  onClick={() => {
+                actions.verificacion(usuario.email,usuario.password);
+                if(localStorage.getItem("Token")){
+                window.location.href="/medicos"}
+                else{
+                  alert("datos incorrectos")
+                }
+              }}
                 bg={'green.800'}
                 color={'white'}
                 _hover={{

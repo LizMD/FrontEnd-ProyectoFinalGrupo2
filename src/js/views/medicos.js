@@ -1,10 +1,22 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams,useHistory } from "react-router-dom";
 import { CardMedicos } from "../component/cardMedicos";
 import { Context } from "../store/appContext";
 
 export const Medicos=()=>{
+    const history =useHistory()
+    const { store, actions } = useContext(Context);
+useEffect(()=>{
+    if(localStorage.getItem("Token")){
+        alert("deverias tener permiso",
+        actions.usuario()
+        
+        )}
+    else{
+        history.push("/")
+    }
 
+},[])
     return (
         <div className="container color1">
         <div className="row">
