@@ -40,15 +40,21 @@ export const Navbar = () => {
           </div>
         </div>
         <div className="justify-content-end" style={{ marginRight: "80px" }}>
-          <Link to="/Registro">
-            <button
-              type="button"
-              className="btn btn-sm fw-bold"
-              style={{ backgroundColor: "#eee7ce" }}
-            >
-              Iniciar sesion/Registrate
-            </button>
-          </Link>
+        <div className="btn-group dropstart">
+  <button 
+   type="button"
+   className="btn btn-sm fw-bold rounded-3 border border-2"
+   style={{ backgroundColor: "#eee7ce" }} 
+  data-bs-toggle="dropdown" 
+  aria-expanded="false">
+    Dropstart
+  </button>
+  <ul className="dropdown-menu fw-bold" style={{ backgroundColor: "#eee7ce" }}>
+  <li><a className="dropdown-item fw-bold"  href="#">Action</a></li>
+ <li><a className="dropdown-item fw-bold" href="#">Another action</a></li>
+  <li><a className="dropdown-item fw-bold" href="#">Something else here</a></li>
+  </ul>
+</div>
         </div>
       </div>
     </nav>

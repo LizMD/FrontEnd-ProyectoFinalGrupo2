@@ -1,5 +1,4 @@
 import React from "react";
-
 import carru1 from "../../img/centromedico.jpg"
 import carru2 from "../../img/carru2.jpg"
 import carru3 from "../../img/carru3.jpg"
@@ -9,44 +8,7 @@ import "../../styles/home.css";
 export const Home = () => (
 	
   <div className="text-center mt-5">
-    <div style={{ height: "50px", border: "2px", borderColor: "red"}}>
-      <button
-              type="button"
-              className="btn btn-sm fw-bold"
-              style={{ backgroundColor: "#eee7ce", marginBottom: "3px"}}
-            >
-              Pediatría
-            </button>
-            <button
-              type="button"
-              className="btn btn-sm fw-bold"
-              style={{ backgroundColor: "#eee7ce", marginLeft: "20px", marginBottom: "3px" }}
-            >
-              Kinesiología
-            </button>
-            <button
-              type="button"
-              className="btn btn-sm fw-bold"
-              style={{ backgroundColor: "#eee7ce", marginLeft: "20px", marginBottom: "3px" }}
-            >
-              Médico Cirujano 
-            </button>
-            <button
-              type="button"
-              className="btn btn-sm fw-bold"
-              style={{ backgroundColor: "#eee7ce", marginLeft: "20px", marginBottom: "3px" }}
-            >
-              Pediatría
-            </button>
-            <button
-              type="button"
-              className="btn btn-sm fw-bold"
-              style={{ backgroundColor: "#eee7ce", marginLeft: "20px", marginBottom: "3px" }}
-            >
-              Odontología
-            </button>
-          
-    </div>
+    
 		<div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
   <div className="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
