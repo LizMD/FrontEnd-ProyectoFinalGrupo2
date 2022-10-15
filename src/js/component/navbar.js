@@ -20,56 +20,7 @@ export const Navbar = () => {
               Inicio
             </button>
           </Link>
-          <Link to="/medicos">
-            
-              <button 
-                type="button"
-                className="dropdown btn btn-sm fw-bold"
-                style={{ backgroundColor: "#eee7ce", marginLeft: "10px" }}
-                id="dropdownMenu2"
-                data-bs-toggle="dropdown"
-                aria-expanded="true"
-              >
-                Especialidades
-              </button>
-              <ul
-                className="dropdown-menu"
-                aria-labelledby="dropdownMenu2"
-                style={{ backgroundColor: "#eee7ce" }}
-              >
-                <li>
-                  <button className="dropdown-item" type="button">
-                    Cirujano Plastico
-                  </button>
-                </li>
-                <li>
-                  <button className="dropdown-item" type="button">
-                    Dermatologo
-                  </button>
-                </li>
-                <li>
-                  <button className="dropdown-item" type="button">
-                    Pediatra
-                  </button>
-                </li>
-                <li>
-                  <button className="dropdown-item" type="button">
-                    Odontología
-                  </button>
-                </li>
-                <li>
-                  <button className="dropdown-item" type="button">
-                  kinesiología
-                  </button>
-                </li>
-                <li>
-                  <button className="dropdown-item" type="button">
-                  Traumatología
-                  </button>
-                </li>
-              </ul>
-            
-          </Link>
+          
         </div>
         <div className="justify-content-center">
           <div className="container" style={{ marginLeft: "100px" }}>
@@ -83,7 +34,7 @@ export const Navbar = () => {
                 />
               </div>
               <div className="col-9 text-white d-flex align-items-center">
-                Bienetar Centro Medico
+                Bienestar Centro Médico
               </div>
             </div>
           </div>
