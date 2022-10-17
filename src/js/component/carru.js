@@ -15,7 +15,7 @@ export const Carru = () => (
   </div>
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img src={carru1} className="d-block w-90" alt="..." />
+      <img src={carru1} className="d-block w-100" alt="..." />
     </div>
     <div className="carousel-item">
     <img src={carru2} className="d-block w-100" alt="..." />

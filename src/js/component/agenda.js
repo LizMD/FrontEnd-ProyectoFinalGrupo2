@@ -6,6 +6,7 @@ import Inst from "../../img/inst.jpg";
 import Fac from "../../img/fac.jpg";
 import Twi from "../../img/twi.jpg";
 import Tele from "../../img/tele.jpg";
+import "../../styles/home.css";
 
 export const Agenda = () => (
   <div className="container-fluid">
@@ -22,11 +23,15 @@ export const Agenda = () => (
             alt="..."
             width={3}
           />
-          <div className=" margin-left-1 text-white fw-bold fs-6">
-            <p>
-              Santiago Av. Manquehue Sur 350. Las Condes R.M.
+          <br></br>
+          <div className=" margin-left-7 text-white fw-bold fs-6">
+            <p className="fs-7">
+              Santiago Av. Manquehue Sur 350.
+              <p className="fs-7">Las Condes R.M.</p>
             </p>
-            <p>P: +56 (9) 7284 8039 chile@4GeeksAcademy.com</p>
+            <p className="fs-7">P: +56 (9) 7284 8039 
+            </p>
+            <p className="fs-7">chile@4GeeksAcademy.com</p>
           </div>
         </div>
       </div>
@@ -55,7 +60,7 @@ export const Agenda = () => (
               />
             </div>
             <div className="col-4 justify-content-start">
-            <a href="#" className="card-link fw-bold">Facebook</a>
+            <a href="https://www.facebook.com/BienestarCentroMedico" target="_blank" rel="noopener noreferrer" className="card-link fw-bold redes">Facebook</a>
             </div>
             <div className="col-2">
             <img
@@ -66,7 +71,7 @@ export const Agenda = () => (
               />
             </div>
             <div className="col-4">
-            <a href="#" className="card-link fw-bold">Instagram</a>
+            <a href="https://www.instagram.com/BienestarCentroMedico" target="_blank" rel="noopener noreferrer" className="card-link fw-bold redes">Instagram</a>
             </div>
           </div>
           <br></br>
@@ -80,7 +85,7 @@ export const Agenda = () => (
               />
             </div>
             <div className="col-4 justify-content-start">
-            <a href="#" className="card-link fw-bold">Twiter</a>
+            <a href="https://www.twiter.com/BienestarCentroMedico" target="_blank" rel="noopener noreferrer" className="card-link fw-bold redes">Twiter</a>
             </div>
             <div className="col-2">
             <img
@@ -91,7 +96,7 @@ export const Agenda = () => (
               />
             </div>
             <div className="col-4">
-            <a href="#" className="card-link fw-bold">Telegram</a>
+            <a href="https://www.telegram.com/BienestarCentroMedico" target="_blank" rel="noopener noreferrer" className="card-link fw-bold redes">Telegram</a>
             </div>
           </div>
         </div>
