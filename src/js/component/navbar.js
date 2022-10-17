@@ -16,7 +16,7 @@ export const Navbar = () => {
             <button
               type="button"
               className="btn btn-sm fw-bold"
-              style={{ backgroundColor: "#eee7ce", marginRight: "20px" }}
+              style={{ backgroundColor: "#eee7ce", marginRight: "15px" }}
             >
               Inicio
             </button>
@@ -32,7 +32,7 @@ export const Navbar = () => {
           </Link>
         </div>
         <div className="justify-content-center">
-          <div className="container" style={{ marginLeft: "100px" }}>
+          <div className="container" style={{ marginLeft: "50px" }}>
             <div className="row">
               <div className="col-3">
                 <img
