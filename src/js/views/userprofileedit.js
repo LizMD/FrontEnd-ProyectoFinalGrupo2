@@ -13,6 +13,7 @@ import {
     AvatarBadge,
     IconButton,
     Center,
+    Link,
   } from '@chakra-ui/react';
   import { AiFillCloseCircle } from "react-icons/ai";
   
@@ -76,7 +77,7 @@ import {
             />
           </FormControl>
           <Stack spacing={6} direction={['column', 'row']}>
-            <Button
+          <Link href="/perfilusuario"><Button
               bg={'green.800'}
               color={'white'}
               w="full"
@@ -84,7 +85,7 @@ import {
                 bg: 'green.500',
               }}>
               Cancelar
-            </Button>
+            </Button></Link>
             <Button
               bg={'green.800'}
               color={'white'}
