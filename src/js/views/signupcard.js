@@ -59,6 +59,10 @@ export default function SignupCard() {
               <FormLabel>Correo Electrónico</FormLabel> 
               <Input type="email" /> 
             </FormControl> 
+            <FormControl id="email" isRequired> 
+              <FormLabel>Previsión</FormLabel> 
+              <Input type="email" /> 
+            </FormControl> 
             <FormControl id="password" isRequired> 
               <FormLabel>Contraseña</FormLabel> 
               <InputGroup> 

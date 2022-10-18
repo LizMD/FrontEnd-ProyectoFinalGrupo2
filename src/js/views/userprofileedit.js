@@ -72,6 +72,14 @@ import {
               type="email"
             />
           </FormControl>
+          <FormControl id="email" isRequired>
+            <FormLabel>Previsión</FormLabel>
+            <Input
+              placeholder="tu-email@ejemplo.com"
+              _placeholder={{ color: 'gray.500' }}
+              type="email"
+            />
+          </FormControl>
           <FormControl id="password" isRequired>
             <FormLabel>Contraseña</FormLabel>
             <Input
