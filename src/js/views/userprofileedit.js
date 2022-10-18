@@ -35,31 +35,18 @@ import {
           <Heading lineHeight={1.1} fontSize={{ base: '2xl', sm: '3xl' }}>
             Editar Perfil de Usuario
           </Heading>
-          <FormControl id="userName">
-            <FormLabel>Ícono del Usuario</FormLabel>
-            <Stack direction={['column', 'row']} spacing={6}>
-              <Center>
-                <Avatar size="xl" src="https://bit.ly/sage-adebayo">
-                  <AvatarBadge
-                    as={IconButton}
-                    size="sm"
-                    rounded="full"
-                    top="-10px"
-                    colorScheme="red"
-                    aria-label="remove Image"
-                    icon={<AiFillCloseCircle />}
-                  />
-                </Avatar>
-              </Center>
-              <Center w="full">
-                <Button w="full">Cambia el Ícono</Button>
-              </Center>
-            </Stack>
-          </FormControl>
-          <FormControl id="userName" isRequired>
-            <FormLabel>Nombre del usuario</FormLabel>
+          <FormControl id="Nombre" isRequired>
+            <FormLabel>Nombre</FormLabel>
             <Input
-              placeholder="nombre del Usuario"
+              placeholder="carla"
+              _placeholder={{ color: 'gray.500' }}
+              type="text"
+            />
+          </FormControl>
+          <FormControl id="Nombre" isRequired>
+            <FormLabel>Apellido</FormLabel>
+            <Input
+              placeholder="soto"
               _placeholder={{ color: 'gray.500' }}
               type="text"
             />
@@ -72,10 +59,10 @@ import {
               type="email"
             />
           </FormControl>
-          <FormControl id="email" isRequired>
+          <FormControl id="Previsión" isRequired>
             <FormLabel>Previsión</FormLabel>
             <Input
-              placeholder="tu-email@ejemplo.com"
+              placeholder="fonasa"
               _placeholder={{ color: 'gray.500' }}
               type="email"
             />
@@ -96,7 +83,7 @@ import {
               _hover={{
                 bg: 'green.500',
               }}>
-              Cancel
+              Cancelar
             </Button>
             <Button
               bg={'green.800'}
@@ -105,7 +92,7 @@ import {
               _hover={{
                 bg: 'green.500',
               }}>
-              Submit
+              Guardar Cambios
             </Button>
           </Stack>
         </Stack>
