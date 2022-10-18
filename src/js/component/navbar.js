@@ -21,15 +21,6 @@ export const Navbar = () => {
               Inicio
             </button>
           </Link>
-          <Link to="/medicos">
-            <button
-              type="button"
-              className="btn btn-sm fw-bold"
-              style={{ backgroundColor: "#eee7ce" }}
-            >
-              Especializaciones
-            </button>
-          </Link>
         </div>
         <div className="justify-content-center">
           <div className="container" style={{ marginLeft: "50px" }}>
