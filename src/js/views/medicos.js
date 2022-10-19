@@ -1,50 +1,24 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link, useParams,useHistory } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { CardMedicos } from "../component/cardMedicos";
+import { CardMedicos1 } from "../component/cardMedicos1";
+import { CardMedicos2 } from "../component/cardMedicos2";
+import { CardMedicos3 } from "../component/cardMedicos3";
+import { CardMedicos4 } from "../component/cardMedicos4";
+import { CardMedicos5 } from "../component/cardMedicos5";
 import { Context } from "../store/appContext";
 
 export const Medicos=()=>{
-    /* este codigo es para usar en las paginas privadas */
-   /*  const history =useHistory()
-    const { store, actions } = useContext(Context);
-useEffect(()=>{
-    if(localStorage.getItem("Token")){
-        alert("deverias tener permiso",
-        actions.usuario()
-        
-        )}
-    else{
-        history.push("/")
-    }
 
-},[]) */
     return (
         <div className="container color1">
         <div className="row">
         <CardMedicos/>
-        <CardMedicos/>
-        <CardMedicos/>
-        <CardMedicos/>
-        <CardMedicos/>
-        <CardMedicos/>
-        {/* 
-        {store.medicos.map((obj,index)=>{
-            return(
-                <CardMedicos
-                nombre={obj.name}
-                especialidades={especialidades.map(especialidad)=>{
-                    {especialidad}
-                }
-            }
-            imagen-url:{obj.img}
-                />
-            )
-        })}
-        
-        */}
-
-
-
+        <CardMedicos1/>
+        <CardMedicos2/>
+        <CardMedicos3/>
+        <CardMedicos4/>
+        <CardMedicos5/>
         </div>
         </div>
     )

@@ -1,0 +1,26 @@
+.dire {
+    font-size:"10px"
+}
+.carousel-inner .carousel-item img {
+    width: 100% !important;
+    height: 450px !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+}
+.fs-7 {
+    font-size: .7em;
+}
+.redes:hover {
+color: white !important;
+}
+.dropdown {
+    background-color: #eee7ce;
+}
+.dropdown .dropdown-menu {
+    background-color: #eee7ce;
+    color:white;
+    text-decoration-color: white;
+}
+.dropdown .dropdown-menu .dropdown-item:hover{
+    background-color: #064439;   
+}
