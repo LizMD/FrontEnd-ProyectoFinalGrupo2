@@ -12,7 +12,7 @@ export const Navbar = () => {
     >
       <div className="container-fluid">
         <div className="justify-content-start" style={{ marginLeft: "80px" }}>
-          <Link to="/home">
+          <Link to="/">
             <button
               type="button"
               className="btn btn-sm fw-bold"
@@ -49,23 +49,23 @@ export const Navbar = () => {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Inicia sesión/Registrarse
+              Inicia Sesión/Registrarse
             </a>
 
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <Link to="/inisesion">
+              <Link to="/logincard">
                 <li>
-                  <a className="dropdown-item fw-bold">Inicia sesión</a>
+                  <a className="dropdown-item fw-bold">Inicia Sesión</a>
                 </li>
               </Link>
-              <Link to="/registrarse">
+              <Link to="/signupcard">
                 <li>
                   <a className="dropdown-item fw-bold" href="#">
                     Registrarse
                   </a>
                 </li>
               </Link>
-              <Link to="/recupera">
+              <Link to="/forgotpasswordcard">
                 <li>
                   <a className="dropdown-item fw-bold" href="#">
                     Recuperar contraseña

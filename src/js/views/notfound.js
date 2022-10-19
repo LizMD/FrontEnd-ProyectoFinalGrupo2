@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Heading, Text, Button } from '@chakra-ui/react';
+import { Link } from "react-router-dom";
 
 export default function NotFound() {
   return (
@@ -18,7 +19,7 @@ export default function NotFound() {
       <Text color={'gray.500'} mb={6}>
         La página que estás buscando no existe
       </Text>
-
+      <Link to="/">
       <Button
         colorScheme="green"
         bgGradient="linear(to-r, green.600, green.700, green.800)"
@@ -26,6 +27,7 @@ export default function NotFound() {
         variant="solid">
         Volver al Inicio
       </Button>
+      </Link>
     </Box>
   );
 }
