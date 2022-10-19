@@ -4,7 +4,8 @@ import { CardMedicos } from "../component/cardMedicos";
 import { Context } from "../store/appContext";
 
 export const Medicos=()=>{
-    const history =useHistory()
+    /* este codigo es para usar en las paginas privadas */
+   /*  const history =useHistory()
     const { store, actions } = useContext(Context);
 useEffect(()=>{
     if(localStorage.getItem("Token")){
@@ -16,7 +17,7 @@ useEffect(()=>{
         history.push("/")
     }
 
-},[])
+},[]) */
     return (
         <div className="container color1">
         <div className="row">
