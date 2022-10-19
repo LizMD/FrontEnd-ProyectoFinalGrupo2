@@ -12,7 +12,7 @@ export const Navbar = () => {
     >
       <div className="container-fluid">
         <div className="justify-content-start" style={{ marginLeft: "80px" }}>
-          <Link to="/">
+          <Link to="/home">
             <button
               type="button"
               className="btn btn-sm fw-bold"
