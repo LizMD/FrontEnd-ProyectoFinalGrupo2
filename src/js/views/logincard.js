@@ -79,6 +79,7 @@ export default function LoginCard() {
               <Button  onClick={() => {
                 actions.verificacion(usuario.email,usuario.password);
                 
+                
               }}
                 bg={'green.800'}
                 color={'white'}

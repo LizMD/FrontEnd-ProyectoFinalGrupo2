@@ -1,7 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			usuario:{},
+			Usuario:{},
 			Medicos:[],
 
 			demo: [
@@ -20,7 +20,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			getMedicos:()=>{
 				const store = getStore();
-				fetch("https://3000-bairon00-repobackproyec-ctleislobbg.ws-us72.gitpod.io/medicos")
+				fetch("https://3000-bairon00-repobackproyec-0b9v4w4c9ys.ws-us72.gitpod.io/medicos")
   				.then(response => response.json())
   				.then(result => setStore({Medicos:result}))
   				.catch(error => console.log('error', error));
@@ -43,18 +43,21 @@ const getState = ({ getStore, getActions, setStore }) => {
                   redirect: 'follow'
                 };
 
-                fetch("https://3000-bairon00-repobackproyec-ctleislobbg.ws-us72.gitpod.io/login", requestOptions)
+                fetch("https://3000-bairon00-repobackproyec-0b9v4w4c9ys.ws-us72.gitpod.io/login", requestOptions)
                   .then(response => response.json())
-                  .then(result => {localStorage.setItem("Token", result.token)})
+                  .then(result => {
+					localStorage.setItem("Token", result.token)
+					if(localStorage.getItem("Token")){
+						window.location.href="/perfilusuario"}
+						else{
+						  alert("datos incorrectos")
+						}
+					
+					
+				})
                   .catch(error => console.log('error', error));
 				  
-				  if(localStorage.getItem("Token")){
-					window.location.href="/medicos"}
-					else{
-					  alert("datos incorrectos")
-					}
-
-
+				 
 			},
 			usuario:()=>{var myHeaders = new Headers();
 				myHeaders.append("Authorization", "Bearer "+localStorage.getItem("Token"));
@@ -65,9 +68,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 				  redirect: 'follow'
 				};
 			
-				fetch("https://3000-bairon00-repobackproyec-ctleislobbg.ws-us72.gitpod.io/perfil", requestOptions)
+				fetch("https://3000-bairon00-repobackproyec-0b9v4w4c9ys.ws-us72.gitpod.io/perfil", requestOptions)
 				  .then(response => response.json())
-				  .then(result => console.log(result))
+				  .then(result => {
+					if(result.user){
+					setStore({Usuario:result})
+					}else{
+						localStorage.removeItem("Token")
+						window.location.href="/"
+
+					}
+					
+					})
 				  .catch(error => console.log('error', error));
 				},
 			// Use getActions to call a function within a fuction
@@ -77,8 +89,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			cerrar:()=>{
 				const store = getStore();
-				setStore({usuario:{...store.usuario,is_active:false}})
-				console.log(store.usuarios[index].active)
+				setStore({Usuario:{...store.Usuario,is_active:false}})
+				console.log(store.Usuario.active)
 				localStorage.deleteItem("Token")
 
 				

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { Context } from "../store/appContext"
 import {
     Button,
     Flex,
@@ -18,8 +19,18 @@ import {
   import { AiFillCloseCircle } from "react-icons/ai";
   
   export default function PerfilUsuario() {
+    const { store, actions } = useContext(Context);
+    useEffect(()=>{
+      actions.usuario()
+      
+    },[])
+    
     return (
-      <Flex
+      
+      
+        
+        
+            <Flex
         minH={'100vh'}
         align={'center'}
         justify={'center'}
@@ -37,16 +48,16 @@ import {
             Información del Usuario
           </Heading>
           <FormControl id="Nombre">
-            <FormLabel>Nombre:</FormLabel>
+            <FormLabel>Nombre:{store.Usuario.user?.name}</FormLabel>
           </FormControl>
           <FormControl id="Apellido">
-            <FormLabel>Apellido:</FormLabel>
+            <FormLabel>Apellido:{store.Usuario.user?.last_name}</FormLabel>
           </FormControl>
           <FormControl id="email">
-            <FormLabel>Correo Electrónico:</FormLabel>
+            <FormLabel>Correo Electrónico:{store.Usuario.user?.email}</FormLabel>
           </FormControl>
           <FormControl id="Previsión">
-            <FormLabel>Previsión:</FormLabel>
+            <FormLabel>Previsión:{store.Usuario.user?.prevision}</FormLabel>
           </FormControl>
           <FormControl id="password">
             <FormLabel>Contraseña:</FormLabel>
@@ -66,5 +77,9 @@ import {
         </Stack> 
         </Stack>
       </Flex>
-    );
+          )
+        
+      
+     
+    
   }
