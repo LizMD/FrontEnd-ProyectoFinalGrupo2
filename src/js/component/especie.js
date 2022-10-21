@@ -9,7 +9,7 @@ export const Especie = () => {
     <nav className="navbar justify-content-center"
       style={{ backgroundColor: "#fffcf6" }}>
       
-      <Link to="/medicos">
+      <Link to="/Medicos/Cosmetología">
             <button
               type="button"
               className="btn btn-sm fw-bold"
@@ -19,7 +19,7 @@ export const Especie = () => {
 
             </button>
           </Link>
-          <Link to="/medicos">
+          <Link to="/Medicos/Dermatología">
             <button
               type="button"
               className="btn btn-sm fw-bold"
@@ -29,7 +29,7 @@ export const Especie = () => {
 
             </button>
           </Link>
-          <Link to="/medicos">
+          <Link to="/Medicos/Nutrición">
             <button
               type="button"
               className="btn btn-sm fw-bold"
@@ -39,7 +39,7 @@ export const Especie = () => {
 
             </button>
           </Link>
-          <Link to="/medicos">
+          <Link to="/Medicos/Psicología">
             <button
               type="button"
               className="btn btn-sm fw-bold"
@@ -49,7 +49,7 @@ export const Especie = () => {
 
             </button>
           </Link>
-          <Link to="/medicos">
+          <Link to="/Medicos/Psiquiatría">
             <button
               type="button"
               className="btn btn-sm fw-bold"

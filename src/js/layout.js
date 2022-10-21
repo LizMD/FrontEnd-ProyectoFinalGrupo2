@@ -11,6 +11,7 @@ import ForgotPasswordCard from "./views/forgotpasswordcard";
 import NotFound from "./views/notfound";
 import UserProfileEdit from "./views/userprofileedit";
 import PerfilUsuario from "./views/perfilusuario";
+import { Medicos } from "./views/medicos";
 
 import injectContext from "./store/appContext";
 
@@ -18,7 +19,7 @@ import { Navbar } from "./component/navbar";
 import { Especie } from "./component/especie";
 import { Footer } from "./component/footer";
 import { Agenda } from "./component/agenda";
-import { Medicos } from "./component/medicos";
+
 
 
 //create your first component
@@ -40,7 +41,7 @@ const Layout = () => {
             <Route exact path="/registro">
               <Demo />
             </Route>
-            <Route exact path="/medicos">
+            <Route exact path="/Medicos/:especialidad">
               <Medicos />
             </Route>
             <Route exact path="/single/:theid">
