@@ -78,11 +78,7 @@ export default function LoginCard() {
               </Stack>
               <Button  onClick={() => {
                 actions.verificacion(usuario.email,usuario.password);
-                if(localStorage.getItem("Token")){
-                window.location.href="/medicos"}
-                else{
-                  alert("datos incorrectos")
-                }
+                
               }}
                 bg={'green.800'}
                 color={'white'}

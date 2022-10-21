@@ -1,11 +1,9 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			usuario:
-				{
-					
-				}
-			,
+			usuario:{},
+			Medicos:[],
+
 			demo: [
 				{
 					title: "FIRST",
@@ -20,6 +18,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
+			getMedicos:()=>{
+				const store = getStore();
+				fetch("https://3000-bairon00-repobackproyec-ctleislobbg.ws-us72.gitpod.io/medicos")
+  				.then(response => response.json())
+  				.then(result => setStore({Medicos:result}))
+  				.catch(error => console.log('error', error));
+
+			},
+
 			verificacion:(email,password)=>{
 				var myHeaders = new Headers();
                 myHeaders.append("Content-Type", "application/json");
@@ -36,10 +43,18 @@ const getState = ({ getStore, getActions, setStore }) => {
                   redirect: 'follow'
                 };
 
-                fetch("https://3000-bairon00-repobackproyec-qiwmm3i7rx0.ws-us71.gitpod.io/login", requestOptions)
+                fetch("https://3000-bairon00-repobackproyec-ctleislobbg.ws-us72.gitpod.io/login", requestOptions)
                   .then(response => response.json())
                   .then(result => {localStorage.setItem("Token", result.token)})
                   .catch(error => console.log('error', error));
+				  
+				  if(localStorage.getItem("Token")){
+					window.location.href="/medicos"}
+					else{
+					  alert("datos incorrectos")
+					}
+
+
 			},
 			usuario:()=>{var myHeaders = new Headers();
 				myHeaders.append("Authorization", "Bearer "+localStorage.getItem("Token"));
@@ -50,7 +65,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				  redirect: 'follow'
 				};
 			
-				fetch("https://3000-bairon00-repobackproyec-qiwmm3i7rx0.ws-us71.gitpod.io/perfil", requestOptions)
+				fetch("https://3000-bairon00-repobackproyec-ctleislobbg.ws-us72.gitpod.io/perfil", requestOptions)
 				  .then(response => response.json())
 				  .then(result => console.log(result))
 				  .catch(error => console.log('error', error));
