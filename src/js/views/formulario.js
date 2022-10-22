@@ -1,43 +1,4 @@
-import React, { useContext } from "react";
-import { Context } from "../store/appContext";
-import {
-  Flex,
-  Box,
-  FormControl,
-  FormLabel,
-  Input,
-  InputGroup,
-  HStack,
-  InputRightElement,
-  Stack,
-  Button,
-  Heading,
-  Text,
-  useColorModeValue,
-  Link,
-} from "@chakra-ui/react";
-import { useState } from "react";
-import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
-
-export default function SignupCard(props) {
-  const { store, actions } = useContext(Context);
-  const [showPassword, setShowPassword] = useState(false);
-
-  return (
-    <Flex
-      minH={"100vh"}
-      align={"center"}
-      justify={"center"}
-      bg={useColorModeValue("gray.50", "gray.800")}
-    >
-      <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
-        <Stack align={"center"}>
-          <Heading fontSize={"4xl"} textAlign={"center"}>
-            Regístrate
-          </Heading>
-        </Stack>
-        <form onSubmit={(e) => actions.registrarse(e, props.history)}>
-          <Box
+<Box
             rounded={"lg"}
             bg={useColorModeValue("white", "gray.700")}
             boxShadow={"lg"}
@@ -48,30 +9,30 @@ export default function SignupCard(props) {
                 <Box>
                   <FormControl id="firstName" isRequired>
                     <FormLabel>Nombre</FormLabel>
-                    <Input type="text" onChange={actions.handleChange} name={"name"} value={store.name} />
+                    <Input type="text" onChange={actions.handleChange} />
                   </FormControl>
                 </Box>
                 <Box>
                   <FormControl id="lastName" isRequired>
                     <FormLabel>Apellido</FormLabel>
-                    <Input type="text" onChange={actions.handleChange} name={"last_name"} value={store.last_name} />
+                    <Input type="text" onChange={actions.handleChange} />
                   </FormControl>
                 </Box>
               </HStack>
               <FormControl id="email" isRequired>
                 <FormLabel>Correo Electrónico</FormLabel>
-                <Input type="email" onChange={actions.handleChange} name={"email"} value={store.email} />
+                <Input type="email" onChange={actions.handleChange} />
               </FormControl>
               <FormControl id="Previsión" isRequired>
                 <FormLabel>Previsión</FormLabel>
-                <Input type="prevision" onChange={actions.handleChange} name={"prevision"} value={store.prevision} />
+                <Input type="prevision" onChange={actions.handleChange} />
               </FormControl>
               <FormControl id="password" isRequired>
                 <FormLabel>Contraseña</FormLabel>
                 <InputGroup>
                   <Input
                     type={showPassword ? "text" : "password"}
-                    onChange={actions.handleChange} name={"password"} value={store.password}
+                    onChange={actions.handleChange}
                   />
                   <InputRightElement h={"full"}>
                     <Button
@@ -117,8 +78,10 @@ export default function SignupCard(props) {
               </Stack>
             </Stack>
           </Box>
-        </form>
-      </Stack>
-    </Flex>
-  );
-}
+
+           // let formData = new FormData();
+        formData.append("name", store.name);
+        formData.append("last_name", store.last_name);
+        formData.append("email", store.email);
+        formData.append("prevision", store.prevision);
+        formData.append("password", store.password); //

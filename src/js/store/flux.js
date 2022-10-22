@@ -3,7 +3,11 @@ const getState = ({ getStore, getActions, setStore }) => {
     store: {
       Usuario: {},
       Medicos: [],
-
+      name: "",
+      last_name: "",
+      email: "",
+      prevision: "",
+      password: "",
       demo: [
         {
           title: "FIRST",
@@ -87,15 +91,14 @@ const getState = ({ getStore, getActions, setStore }) => {
           })
           .catch((error) => console.log("error", error));
       },
-      registrarse: () => {
+      handleChange: (e) => {
+        const { name, value } = e.target;
+        setStore({ [name]: value });
+      },
+      registrarse: (e, history) => {
         e.preventDefault();
+        alert("Usuario Registrado");
         const store = getStore();
-        if (store.password !== store.confirmedPassword) {
-          setStore({
-            error: "Los datos son incorrectos",
-          });
-          return;
-        }
         if (
           !store.name ||
           !store.last_name ||
@@ -108,19 +111,46 @@ const getState = ({ getStore, getActions, setStore }) => {
           });
           return;
         }
+        const raw = JSON.stringify({
+          name: store.name,
+          last_name: store.last_name,
+          email: store.email,
+          prevision: store.prevision,
+          password: store.password,
+        });
 
-        let formData = new FormData();
-        formData.append("name", store.name);
-        formData.append("last_name", store.last_name);
-        formData.append("email", store.email);
-        formData.append("prevision", store.prevision);
-        formData.append("password", store.password);
+        var requestOptions = {
+          method: "POST",
+          body: raw,
+          headers: {
+            "content-type": "application/json",
+          },
+          redirect: "follow",
+        };
+
         fetch(
           "https://3000-bairon00-repobackproyec-yv9484774m8.ws-us72.gitpod.io/register",
           requestOptions
         )
           .then((response) => response.json())
-          .then((result) => console.log(result))
+          .then((result) => {
+            if (result.registrarse) {
+              setStore({ Registrarse: result });
+            } else {
+              setStore({
+                currentUser: raw,
+                isAuthenticated: true,
+                email: null,
+                password: null,
+                name: null,
+                last_name: null,
+                prevision: null,
+              });
+              sessionStorage.setItem("currentUser", JSON.stringify(raw));
+              sessionStorage.setItem("isAuthenticated", true);
+              window.location.href = "/logincard";
+            }
+          })
           .catch((error) => console.log("error", error));
       },
       // Use getActions to call a function within a fuction
