@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import { Context } from "../store/appContext"
 import {
     Button,
@@ -20,8 +21,15 @@ import {
   
   export default function PerfilUsuario() {
     const { store, actions } = useContext(Context);
+    const  history = useHistory();
     useEffect(()=>{
-      actions.usuario()
+      
+      if(localStorage.getItem("Token")){
+        actions.usuario()
+        }
+    else{
+        history.push("/logincard")
+    }
       
     },[])
     
