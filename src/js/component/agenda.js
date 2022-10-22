@@ -26,8 +26,8 @@ export const Agenda = () => (
           <br></br>
           <div className=" margin-left-7 text-white fw-bold fs-6">
             <p className="fs-7">
-              Santiago Av. Manquehue Sur 350.
-              <p className="fs-7">Las Condes R.M.</p>
+              Av. Manquehue Sur 350
+              <p className="fs-7">Las Condes, Región Metropolitana</p>
             </p>
             <p className="fs-7">P: +56 (9) 7284 8039 
             </p>
