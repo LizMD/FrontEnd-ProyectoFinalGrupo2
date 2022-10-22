@@ -1,4 +1,5 @@
-import React from "react"; 
+import React, { useContext } from 'react'; 
+import { Context } from '../store/appContext'
 import { 
   Flex, 
   Box, 
@@ -19,6 +20,7 @@ import { useState } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai"; 
 
 export default function SignupCard() { 
+  const { store, actions } = useContext(Context)
   const [showPassword, setShowPassword] = useState(false); 
 
   return ( 
@@ -45,28 +47,28 @@ export default function SignupCard() {
               <Box> 
                 <FormControl id="firstName" isRequired> 
                   <FormLabel>Nombre</FormLabel> 
-                  <Input type="text" /> 
+                  <Input type="text" onChange={actions.handleChange} /> 
                 </FormControl> 
               </Box> 
               <Box> 
                 <FormControl id="lastName" isRequired> 
                   <FormLabel>Apellido</FormLabel> 
-                  <Input type="text" /> 
+                  <Input type="text" onChange={actions.handleChange} /> 
                 </FormControl> 
               </Box> 
             </HStack> 
             <FormControl id="email" isRequired> 
               <FormLabel>Correo Electrónico</FormLabel> 
-              <Input type="email" /> 
+              <Input type="email" onChange={actions.handleChange} /> 
             </FormControl> 
             <FormControl id="Previsión" isRequired> 
               <FormLabel>Previsión</FormLabel> 
-              <Input type="email" /> 
+              <Input type="prevision" onChange={actions.handleChange} /> 
             </FormControl> 
             <FormControl id="password" isRequired> 
               <FormLabel>Contraseña</FormLabel> 
               <InputGroup> 
-                <Input type={showPassword ? "text" : "password"} /> 
+                <Input type={showPassword ? "text" : "password"} onChange={actions.handleChange} /> 
                 <InputRightElement h={"full"}> 
                   <Button 
                     variant={"ghost"} 
