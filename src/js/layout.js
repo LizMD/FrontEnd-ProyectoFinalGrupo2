@@ -12,6 +12,7 @@ import NotFound from "./views/notfound";
 import UserProfileEdit from "./views/userprofileedit";
 import PerfilUsuario from "./views/perfilusuario";
 import { Medicos } from "./views/medicos";
+import { Checkout } from "./views/checkout";
 
 import injectContext from "./store/appContext";
 
@@ -46,6 +47,9 @@ const Layout = () => {
             </Route>
             <Route exact path="/single/:theid">
               <Single />
+            </Route>
+            <Route exact path="/checkout">
+              <Checkout/>
             </Route>
             <Route exact path="/signupcard">
               <SignupCard />
