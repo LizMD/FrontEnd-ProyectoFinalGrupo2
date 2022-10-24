@@ -16,7 +16,6 @@ export const Navbar = () => {
 
   } */
   return (
-    
     <nav
       className="navbar navbar-expand-lg navbar-success"
       style={{ backgroundColor: "#064439" }}
@@ -50,17 +49,13 @@ export const Navbar = () => {
             </div>
           </div>
         </div>
-        {localStorage.getItem("Token")?(
-							
-								<button className="btn inicio " style={{ marginRight: "130px",width:"150px" }} onClick={()=>actions.aa(history)}>Cerrar sesion</button>
-							): (
-							<Link to="/logincard">
-								<button className="btn inicio " style={{ marginRight: "140px",width:"150px" }} > Iniciar sesion</button>
-							</Link>
-						)
-					}
+        
+          {localStorage.getItem("Token")?(
 
-        <div className="justify-content-end" style={{ marginRight: "80px" }}>
+          <button className="btn inicio " style={{ marginRight: "130px",width:"150px" }} onClick={()=>actions.aa(history)}>Cerrar sesion</button>
+          ):(
+
+            <div className="justify-content-end" style={{ marginRight: "80px" }}>
           <div className="rounded-3 border border-2 dropdown">
             <a
               className="btn btn-sm fw-bold rounded-3 border border-2"
@@ -93,10 +88,10 @@ export const Navbar = () => {
                   </a>
                 </li>
               </Link>
-              
             </ul>
           </div>
         </div>
+          )}
       </div>
     </nav>
   );
