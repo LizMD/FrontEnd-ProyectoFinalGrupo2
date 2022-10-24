@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useHistory } from "react-router-dom";
 import { Context } from "../store/appContext";
 import logo from "../../img/logopequeño.jpg";
 import { Link } from "react-router-dom";
 import "../../styles/home.css";
 
 export const Navbar = () => {
+  const { store, actions } = useContext(Context);
+  let history = useHistory();
+  console.log(store.Usuario.user?.is_active)
+  /* const aa = ()=>{
+    store.Usuario.user?.is_active==false
+    localStorage.removeItem("Token")
+    history.push("/")
+
+  } */
   return (
+    
     <nav
       className="navbar navbar-expand-lg navbar-success"
       style={{ backgroundColor: "#064439" }}
@@ -51,13 +62,18 @@ export const Navbar = () => {
             >
               Inicia Sesión/Registrarse
             </a>
-
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            {localStorage.getItem("Token")?(
+							
+              <button className="btn inicio " style={{ marginRight: "130px",width:"150px" }} onClick={()=>actions.aa(history)}>Cerrar sesion</button>
+            ): (
               <Link to="/logincard">
-                <li>
-                  <a className="dropdown-item fw-bold">Inicia Sesión</a>
-                </li>
-              </Link>
+              <li>
+                <a className="dropdown-item fw-bold">Inicia Sesión</a>
+              </li>
+            </Link>
+          )
+        }
               <Link to="/signupcard">
                 <li>
                   <a className="dropdown-item fw-bold" href="#">
@@ -69,9 +85,11 @@ export const Navbar = () => {
                 <li>
                   <a className="dropdown-item fw-bold" href="#">
                     Recuperar contraseña
+                  
                   </a>
                 </li>
               </Link>
+              
             </ul>
           </div>
         </div>
