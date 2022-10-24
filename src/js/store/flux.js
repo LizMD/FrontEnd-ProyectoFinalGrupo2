@@ -97,7 +97,6 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
       registrarse: (e, history) => {
         e.preventDefault();
-        alert("Usuario Registrado");
         const store = getStore();
         if (
           !store.name ||
@@ -148,8 +147,10 @@ const getState = ({ getStore, getActions, setStore }) => {
               });
               sessionStorage.setItem("currentUser", JSON.stringify(raw));
               sessionStorage.setItem("isAuthenticated", true);
+              alert("Usuario Registrado");
               window.location.href = "/logincard";
             }
+
           })
           .catch((error) => console.log("error", error));
       },
