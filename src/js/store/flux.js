@@ -3,6 +3,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			Usuario: {},
 			Medicos: [],
+			name: "",
+			last_name: "",
+			email: "",
+			prevision: "",
+			password: "",
 
 			demo: [
 				{
@@ -20,7 +25,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			getMedicos: () => {
 				const store = getStore();
-				fetch("https://3000-bairon00-repobackproyec-2mo79bdj3pe.ws-us72.gitpod.io/medicos")
+				fetch("https://3000-bairon00-repobackproyec-nvxwgyso4hc.ws-us72.gitpod.io/medicos")
 					.then(response => response.json())
 					.then(result => setStore({ Medicos: result }))
 					.catch(error => console.log('error', error));
@@ -42,7 +47,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-bairon00-repobackproyec-2mo79bdj3pe.ws-us72.gitpod.io/login", requestOptions)
+				fetch("https://3000-bairon00-repobackproyec-nvxwgyso4hc.ws-us72.gitpod.io/login", requestOptions)
 					.then(response => response.json())
 					.then(result => {
 						localStorage.setItem("Token", result.token)
@@ -69,7 +74,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-bairon00-repobackproyec-2mo79bdj3pe.ws-us72.gitpod.io/perfil", requestOptions)
+				fetch("https://3000-bairon00-repobackproyec-nvxwgyso4hc.ws-us72.gitpod.io/perfil", requestOptions)
 					.then(response => response.json())
 					.then(result => {
 						if (result.user) {
@@ -99,11 +104,80 @@ const getState = ({ getStore, getActions, setStore }) => {
 				localStorage.clear()
 				setStore({ Usuario: { ...store.Usuario, is_active: false } })
 				console.log(store.Usuario.active)
-
-
-
-
 			},
+			handleChange: (e) => {
+				const { name, value } = e.target;
+				setStore({ [name]: value });
+			},
+			registrarse: (e, history) => {
+				e.preventDefault();
+				const store = getStore();
+				if (
+				  !store.name ||
+				  !store.last_name ||
+				  !store.email ||
+				  !store.prevision ||
+				  !store.password
+				) {
+				  setStore({
+					error: "Debe completar todos los campos",
+				  });
+				  return;
+				}
+				const raw = JSON.stringify({
+				  name: store.name,
+				  last_name: store.last_name,
+				  email: store.email,
+				  prevision: store.prevision,
+				  password: store.password,
+				});
+		
+				var requestOptions = {
+				  method: "POST",
+				  body: raw,
+				  headers: {
+					"content-type": "application/json",
+				  },
+				  redirect: "follow",
+				};
+		
+				fetch(
+				  "https://3000-bairon00-repobackproyec-nvxwgyso4hc.ws-us72.gitpod.io/register",
+				  requestOptions
+				)
+				  .then((response) => response.json())
+				  .then((result) => {
+					if (result.registrarse) {
+					  setStore({ Registrarse: result });
+					} else {
+					  setStore({
+						currentUser: raw,
+						isAuthenticated: true,
+						email: null,
+						password: null,
+						name: null,
+						last_name: null,
+						prevision: null,
+					  });
+					  sessionStorage.setItem("currentUser", JSON.stringify(raw));
+					  sessionStorage.setItem("isAuthenticated", true);
+					  alert("Usuario Registrado");
+					  window.location.href = "/logincard";
+					}
+		
+				  })
+				  .catch((error) => console.log("error", error));
+			  },
+
+
+
+
+
+
+
+
+
+
 			loadSomeData: () => {
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
