@@ -12,6 +12,7 @@ import NotFound from "./views/notfound";
 import UserProfileEdit from "./views/userprofileedit";
 import PerfilUsuario from "./views/perfilusuario";
 import { Medicos } from "./views/medicos";
+import {Recuperar} from "./views/recuperar"
 
 import injectContext from "./store/appContext";
 
@@ -55,6 +56,9 @@ const Layout = () => {
             </Route>
             <Route exact path="/forgotpasswordcard">
               <ForgotPasswordCard />
+            </Route>
+            <Route exact path="/recuperar">
+              <Recuperar />
             </Route>
             <Route exact path="/userprofileedit">
 							<UserProfileEdit />
