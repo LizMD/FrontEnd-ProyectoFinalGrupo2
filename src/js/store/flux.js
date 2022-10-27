@@ -165,7 +165,7 @@ const getState = ({ getStore, getActions, setStore }) => {
               sessionStorage.setItem("currentUser", JSON.stringify(raw));
               sessionStorage.setItem("isAuthenticated", true);
               alert("Usuario Registrado");
-              window.location.href = "/logincard";
+              window.lo2cation.href = "/logincard";
             }
           })
           .catch((error) => console.log("error", error));
@@ -181,17 +181,24 @@ const getState = ({ getStore, getActions, setStore }) => {
           !store.prevision ||
           !store.password
         ) {
-          alert("Faltan datos") 
+          alert("Faltan datos");
           return;
         }
-          var requestOptions = {
-            method: "PUT",
-            body: raw,
-            redirect: {
-              "content-type": "application/json",
-            },
-            redirect: "follow",
-          };
+        const raw = JSON.stringify({
+          email: store.email,
+          password: store.password,
+          name: store.name,
+          last_name: store.last_name,
+          prevision: store.prevision,
+        });
+        var requestOptions = {
+          method: "PUT",
+          body: raw,
+          headers: {
+            "content-type": "application/json",
+          },
+          redirect: "follow",
+        };
 
         fetch(
           "https://3000-bairon00-repobackproyec-yv9484774m8.ws-us72.gitpod.io/user/1/edit",

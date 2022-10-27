@@ -49,7 +49,8 @@ export default function UserProfileEdit(props) {
               _placeholder={{ color: "gray.500" }}
               type="text"
               onChange={actions.handleChange}
-              defaultValue={store.name}
+              value={store.name}
+              name="name"
             />
           </FormControl>
           <FormControl id="Nombre" isRequired>
@@ -59,7 +60,8 @@ export default function UserProfileEdit(props) {
               _placeholder={{ color: "gray.500" }}
               type="text"
               onChange={actions.handleChange}
-              defaultValue={store.last_name}
+              value={store.last_name}
+              name="last_name"
             />
           </FormControl>
           <FormControl id="email" isRequired>
@@ -69,7 +71,8 @@ export default function UserProfileEdit(props) {
               _placeholder={{ color: "gray.500" }}
               type="email"
               onChange={actions.handleChange}
-              defaultValue={store.email}
+              value={store.email}
+              name="email"
             />
           </FormControl>
           <FormControl id="Previsión" isRequired>
@@ -79,7 +82,8 @@ export default function UserProfileEdit(props) {
               _placeholder={{ color: "gray.500" }}
               type="text"
               onChange={actions.handleChange}
-              defaultValue={store.prevision}
+              value={store.prevision}
+              name="prevision"
             />
           </FormControl>
           <FormControl id="password" isRequired>
@@ -89,7 +93,8 @@ export default function UserProfileEdit(props) {
               _placeholder={{ color: "gray.500" }}
               type="password"
               onChange={actions.handleChange}
-              defaultValue={store.password}
+              value={store.password}
+              name="password"
             />
           </FormControl>
           <Stack spacing={6} direction={["column", "row"]}>
