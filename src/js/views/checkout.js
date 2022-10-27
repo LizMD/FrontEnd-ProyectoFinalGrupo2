@@ -14,6 +14,40 @@ import { useState ,useContext} from "react";
     .catch(error => console.log('error', error));
  */
 // extraer variable de key: init_point que es url de mercado pago que se ejecuta con el boton
+
+/* 
+import "./styles.css";
+import { useEffect, useState } from "react";
+
+export default function App() {
+  const [url, setUrl] = useState("");
+  useEffect(() => {
+    fetch(
+      "https://3000-zauverer-mercadopagoapi-85u6w9vgz33.ws-us72.gitpod.io/payment"
+    )
+      .then((response) => response.json())
+      .then((result) => setUrl(result.init_point))
+      .catch((error) => console.log("error?", error));
+  }, []);
+  return (
+    <div className="App">
+      <h1>Hello CodeSandbox</h1>
+      <h2>Start editing to see some magic happen!</h2>
+      {url ? (
+        <button>
+          {" "}
+          <a href={url}>Pagar</a>
+        </button>
+      ) : (
+        ""
+      )}
+    </div>
+  );
+}
+
+ */
+
+
 export const Checkout=()=>{
     
     //const pay = () => alert("vas a pagar")
