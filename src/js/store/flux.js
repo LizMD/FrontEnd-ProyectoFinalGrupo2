@@ -181,27 +181,17 @@ const getState = ({ getStore, getActions, setStore }) => {
           !store.prevision ||
           !store.password
         ) {
-          setStore({
-            error: "Debe completar todos los campos",
-          });
+          alert("Faltan datos") 
           return;
         }
-        const raw = JSON.stringify({
-          name: store.name,
-          last_name: store.last_name,
-          email: store.email,
-          prevision: store.prevision,
-          password: store.password,
-        });
-
-        var requestOptions = {
-          method: "PUT",
-          body: raw,
-          redirect: {
-            "content-type": "application/json",
-          },
-          redirect: "follow",
-        };
+          var requestOptions = {
+            method: "PUT",
+            body: raw,
+            redirect: {
+              "content-type": "application/json",
+            },
+            redirect: "follow",
+          };
 
         fetch(
           "https://3000-bairon00-repobackproyec-yv9484774m8.ws-us72.gitpod.io/user/1/edit",
@@ -213,19 +203,17 @@ const getState = ({ getStore, getActions, setStore }) => {
               setStore({ editUserProfile: result });
             } else {
               setStore({
-				currentUser: raw,
-                isAuthenticated: true,
-                email: null,
-                password: null,
                 name: null,
                 last_name: null,
+                email: null,
                 prevision: null,
+                password: null,
               });
               alert("Usuario Editado");
               window.location.href = "/perfilusuario";
             }
           })
-		  .catch((error) => console.log("error", error));
+          .catch((error) => console.log("error", error));
       },
 
       loadSomeData: () => {

@@ -36,9 +36,11 @@ export default function UserProfileEdit(props) {
           Editar Perfil de Usuario
         </Heading>
         <form
-          onSubmit={(e) =>
+          onSubmit={(e) => {
+            e.preventDefault()
+            console.log(e);
             actions.editUserProfile(e, props.history)
-          }
+          }}
         >
           <FormControl id="Nombre" isRequired>
             <FormLabel>Nombre</FormLabel>
@@ -75,7 +77,7 @@ export default function UserProfileEdit(props) {
             <Input
               placeholder="fonasa"
               _placeholder={{ color: "gray.500" }}
-              type="email"
+              type="text"
               onChange={actions.handleChange}
               defaultValue={store.prevision}
             />
@@ -104,6 +106,8 @@ export default function UserProfileEdit(props) {
               </Button>
             </Link>
             <Button
+              type="submit"
+              loadingText="Submitting"
               bg={"green.800"}
               color={"white"}
               w="full"
