@@ -24,13 +24,10 @@ export const Agenda = () => (
             width={3}
           />
           <br></br>
-          <div className=" margin-left-7 text-white fw-bold fs-6">
-            <p className="fs-7">
-              Av. Manquehue Sur 350
-              <p className="fs-7">Las Condes, Región Metropolitana</p>
-            </p>
-            <p className="fs-7">P: +56 (9) 7284 8039 
-            </p>
+          <div className=" margin-left-7 text-white fw-bold fs-7">
+            <p className="fs-7">Santiago Av. Manquehue Sur 350.</p>
+              <p className="fs-7">Las Condes R.M.</p>
+            <p className="fs-7">P: +56 (9) 7284 8039</p>
             <p className="fs-7">chile@4GeeksAcademy.com</p>
           </div>
         </div>
@@ -39,7 +36,7 @@ export const Agenda = () => (
         <br></br>
         <img
           src={logop}
-          className="rounded mx-auto d-block rounded-3 border border-2"
+          className="rounded mx-auto d-block"
           alt="..."
           width={150}
         />

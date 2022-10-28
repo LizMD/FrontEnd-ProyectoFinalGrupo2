@@ -96,6 +96,9 @@ export default function UserProfileEdit(props) {
               value={store.password}
               name="password"
             />
+            <br></br>
+            <br></br>
+            
           </FormControl>
           <FormControl id="Espacio">
             <FormLabel></FormLabel>
