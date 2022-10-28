@@ -187,7 +187,57 @@ const getState = ({ getStore, getActions, setStore }) => {
 				  })
 				  .catch((error) => console.log("error", error));
 			  },
-
+			  editUserProfile: (e, history) => {
+				e.preventDefault();
+				const store = getStore();
+				if (
+				  !store.name ||
+				  !store.last_name ||
+				  !store.email ||
+				  !store.prevision ||
+				  !store.password
+				) {
+				  alert("Faltan datos");
+				  return;
+				}
+				const raw = JSON.stringify({
+				  email: store.email,
+				  password: store.password,
+				  name: store.name,
+				  last_name: store.last_name,
+				  prevision: store.prevision,
+				});
+				var requestOptions = {
+				  method: "PUT",
+				  body: raw,
+				  headers: {
+					"content-type": "application/json",
+				  },
+				  redirect: "follow",
+				};
+		
+				fetch(
+				  "https://3000-bairon00-repobackproyec-yv9484774m8.ws-us72.gitpod.io/user/1/edit",
+				  requestOptions
+				)
+				  .then((response) => response.json())
+				  .then((result) => {
+					if (result.editUserProfile) {
+					  setStore({ editUserProfile: result });
+					} else {
+					  setStore({
+						name: null,
+						last_name: null,
+						email: null,
+						prevision: null,
+						password: null,
+					  });
+					  alert("Usuario Editado");
+					  window.location.href = "/perfilusuario";
+					}
+				  })
+				  .catch((error) => console.log("error", error));
+			  },
 
 
 
