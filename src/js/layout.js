@@ -12,8 +12,12 @@ import NotFound from "./views/notfound";
 import UserProfileEdit from "./views/userprofileedit";
 import PerfilUsuario from "./views/perfilusuario";
 import { Medicos } from "./views/medicos";
+
 import {Recuperar} from "./views/recuperar"
 import { Recuperar2 } from "./views/recuperar2";
+
+import { Calendario } from "./views/calendario";
+
 
 import injectContext from "./store/appContext";
 
@@ -69,6 +73,9 @@ const Layout = () => {
 						</Route>
             <Route exact path="/perfilusuario">
 							<PerfilUsuario />
+            </Route>
+             <Route exact path="/calendario">
+						<Calendario />
 						</Route>
             <Route>
               <NotFound />

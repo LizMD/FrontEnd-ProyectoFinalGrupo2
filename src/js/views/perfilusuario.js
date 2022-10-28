@@ -67,9 +67,6 @@ import {
           <FormControl id="Previsión">
             <FormLabel>Previsión:{store.Usuario.user?.prevision}</FormLabel>
           </FormControl>
-          <FormControl id="password">
-            <FormLabel>Contraseña:</FormLabel>
-          </FormControl>
           <Stack spacing={6}> 
           <Stack spacing={6}> 
           <Link href="/userprofileedit"><Button 

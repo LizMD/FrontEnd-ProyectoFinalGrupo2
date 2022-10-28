@@ -10,5 +10,24 @@
     <body class="h-100">
         <div id="app" class="h-100"></div>
         <script type="text/javascript" src="./bundle.js"></script>
+        <script src="https://sdk.mercadopago.com/js/v2"></script>
+                  
+<div class="cho-container"></div>
+<script>
+  const mp = new MercadoPago('APP_USR-80a433a9-5ec5-4e7d-94c4-b97ac1478f20', {
+    locale: 'es-CL'
+  });
+
+  mp.checkout({
+    preference: {
+      id: '8257041865871296'
+    },
+    render: {
+      container: '.cho-container',
+      label: 'Pagar',
+    }
+  });
+</script>
+
     </body>
 </html>

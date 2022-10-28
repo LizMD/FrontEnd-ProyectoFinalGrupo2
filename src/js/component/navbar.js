@@ -52,7 +52,9 @@ export const Navbar = () => {
         
           {localStorage.getItem("Token")?(
 
-          <button className="btn inicio " style={{ marginRight: "130px",width:"150px" }} onClick={()=>actions.aa(history)}>Cerrar sesion</button>
+          <button type="button"
+          className="btn btn-sm fw-bold"
+          style={{ backgroundColor: "#eee7ce", marginRight: "15px" }} onClick={()=>actions.aa(history)}>Cerrar sesion</button>
           ):(
 
             <div className="justify-content-end" style={{ marginRight: "80px" }}>
