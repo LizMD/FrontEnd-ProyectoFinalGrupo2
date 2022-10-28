@@ -145,7 +145,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
 
         fetch(
-          "https://3000-bairon00-repobackproyec-nvxwgyso4hc.ws-us72.gitpod.io/register",
+          "https://3000-bairon00-repobackproyec-yv9484774m8.ws-us73.gitpod.io/register",
           requestOptions
         )
           .then((response) => response.json())
@@ -165,12 +165,12 @@ const getState = ({ getStore, getActions, setStore }) => {
               sessionStorage.setItem("currentUser", JSON.stringify(raw));
               sessionStorage.setItem("isAuthenticated", true);
               alert("Usuario Registrado");
-              window.lo2cation.href = "/logincard";
+              window.location.href = "/logincard";
             }
+
           })
           .catch((error) => console.log("error", error));
       },
-
       editUserProfile: (e, history) => {
         e.preventDefault();
         const store = getStore();
@@ -201,7 +201,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
 
         fetch(
-          "https://3000-bairon00-repobackproyec-yv9484774m8.ws-us72.gitpod.io/user/1/edit",
+          "https://3000-bairon00-repobackproyec-yv9484774m8.ws-us73.gitpod.io/user/1/edit",
           requestOptions
         )
           .then((response) => response.json())

@@ -37,9 +37,9 @@ export default function UserProfileEdit(props) {
         </Heading>
         <form
           onSubmit={(e) => {
-            e.preventDefault()
+            e.preventDefault();
             console.log(e);
-            actions.editUserProfile(e, props.history)
+            actions.editUserProfile(e, props.history);
           }}
         >
           <FormControl id="Nombre" isRequired>
@@ -99,6 +99,9 @@ export default function UserProfileEdit(props) {
             <br></br>
             <br></br>
             
+          </FormControl>
+          <FormControl id="Espacio">
+            <FormLabel></FormLabel>
           </FormControl>
           <Stack spacing={6} direction={["column", "row"]}>
             <Link href="/perfilusuario">
