@@ -13,6 +13,7 @@ import UserProfileEdit from "./views/userprofileedit";
 import PerfilUsuario from "./views/perfilusuario";
 import { Medicos } from "./views/medicos";
 import {Recuperar} from "./views/recuperar"
+import { Recuperar2 } from "./views/recuperar2";
 
 import injectContext from "./store/appContext";
 
@@ -59,6 +60,9 @@ const Layout = () => {
             </Route>
             <Route exact path="/recuperar">
               <Recuperar />
+            </Route>
+            <Route exact path="/recuperar2">
+              <Recuperar2 />
             </Route>
             <Route exact path="/userprofileedit">
 							<UserProfileEdit />
