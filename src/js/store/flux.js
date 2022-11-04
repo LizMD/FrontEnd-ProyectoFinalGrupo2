@@ -201,7 +201,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
 
         fetch(
-          "https://3000-bairon00-repobackproyec-yv9484774m8.ws-us72.gitpod.io/user/1/edit",
+          "https://3000-bairon00-repobackproyec-yv9484774m8.ws-us74.gitpod.io/user/1/edit",
           requestOptions
         )
           .then((response) => response.json())
