@@ -23,7 +23,7 @@ export const Agenda = () => (
             alt="..."
             width={3}
           />
-          
+          <br></br>
           <div className=" margin-left-7 text-white fw-bold fs-7">
             <p className="fs-7">Santiago Av. Manquehue Sur 350.</p>
               <p className="fs-7">Las Condes R.M.</p>
@@ -70,7 +70,7 @@ export const Agenda = () => (
               </button>
        
             </div>
-            <div className="col-2 justify-content-end">
+            <div className="col-2 justify-content-end p-b-20">
               <img
                 src={Inst}
                 className="rounded mx-auto d-block"
@@ -92,6 +92,7 @@ export const Agenda = () => (
             </div>
           </div>
           <br></br>
+          
           <div className="row align-items-start">
             <div className="col-2 justify-content-end" >
               

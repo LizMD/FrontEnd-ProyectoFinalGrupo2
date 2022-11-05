@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/home.css";
 
+
 import { Box, Heading, Text, Button } from '@chakra-ui/react';
 import { Link } from "react-router-dom";
 
@@ -20,9 +21,7 @@ export const Success=()=>{
       <br></br>
       <br></br>
       <Heading
-        display="inline-block"
-        as="h2"
-        size="2xl"
+        
         bgGradient="linear(to-r, green.500, green.800)"
         backgroundClip="text">
         Su pago fue agendado exitosamente!
