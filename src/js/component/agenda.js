@@ -54,7 +54,7 @@ export const Agenda = () => (
                 src={Fac}
                 className="rounded mx-auto d-block"
                 alt="..."
-                width={80}
+                width={30}
                 
               />
             </div>
@@ -64,7 +64,7 @@ export const Agenda = () => (
               rel="noopener noreferrer"
                 href="https://www.facebook.com/BienestarCentroMedico"
                 type="button" 
-                className="btn card-link fw-bold redes text-secondary rounded-sm"
+                className="btn-sm card-link fw-bold redes text-secondary rounded-sm"
                 style={{ backgroundColor: "#064439" }} 
                 >Facebook
               </button>
@@ -75,7 +75,7 @@ export const Agenda = () => (
                 src={Inst}
                 className="rounded mx-auto d-block"
                 alt="..."
-                width={80}
+                width={30}
               />
             </div>
             <div className="col-4">
@@ -84,7 +84,7 @@ export const Agenda = () => (
               rel="noopener noreferrer"
                 href="https://www.instagram.com/BienestarCentroMedico"
                 type="button" 
-                className="btn card-link fw-bold redes text-secondary rounded-sm"
+                className="btn-sm card-link fw-bold redes text-secondary rounded-sm"
                 style={{ backgroundColor: "#064439" }} 
                 >Instagram
               </button>
@@ -93,33 +93,34 @@ export const Agenda = () => (
           </div>
           <br></br>
           <div className="row align-items-start">
-            <div className="btn col-2 justify-content-end">
+            <div className="col-2 justify-content-end" >
+              
               <img
                 src={Twi}
                 className="rounded mx-auto d-block"
                 alt="..."
-                width={80}
+                width={30}
+                
               />
             </div>
             <div className="col-4 justify-content-start">
-
-            <button 
+              <button 
               target="_blank"
               rel="noopener noreferrer"
                 href="https://www.twiter.com/BienestarCentroMedico"
                 type="button" 
-                className="btn card-link fw-bold redes text-secondary rounded-sm"
+                className="btn-sm card-link fw-bold redes text-secondary rounded-sm"
                 style={{ backgroundColor: "#064439" }} 
                 >Twitter
               </button>
-
-             </div>
-            <div className="col-2">
-            <img
+       
+            </div>
+            <div className="col-2 justify-content-end">
+              <img
                 src={Tele}
                 className="rounded mx-auto d-block"
                 alt="..."
-                width={80}
+                width={30}
               />
             </div>
             <div className="col-4">
@@ -128,13 +129,23 @@ export const Agenda = () => (
               rel="noopener noreferrer"
                 href="https://www.telegram.com/BienestarCentroMedico"
                 type="button" 
-                className="btn  card-link fw-bold redes text-secondary rounded-sm"
+                className="btn-sm card-link fw-bold redes text-secondary rounded-sm"
                 style={{ backgroundColor: "#064439" }} 
                 >Telegram
               </button>
-              
+            
             </div>
           </div>
+
+
+
+
+
+
+
+
+
+    
         </div>
         <br></br>
         

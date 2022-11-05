@@ -8,6 +8,7 @@ export class Calendario extends React.Component {
   componentWillUnmount() {
     // whatever cleanup stuff you need here
   }
+
   render(){
     return (
       <div>
