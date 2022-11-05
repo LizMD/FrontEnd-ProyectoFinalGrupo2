@@ -38,7 +38,7 @@ export const Agenda = () => (
           src={logop}
           className="rounded mx-auto d-block"
           alt="..."
-          width={80}
+          width={150}
         />
       </div>
       <div className="col" style={{ backgroundColor: "#eee7ce" }}>
