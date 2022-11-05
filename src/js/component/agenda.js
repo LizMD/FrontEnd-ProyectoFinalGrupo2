@@ -23,7 +23,7 @@ export const Agenda = () => (
             alt="..."
             width={3}
           />
-          <br></br>
+          
           <div className=" margin-left-7 text-white fw-bold fs-7">
             <p className="fs-7">Santiago Av. Manquehue Sur 350.</p>
               <p className="fs-7">Las Condes R.M.</p>
@@ -38,7 +38,7 @@ export const Agenda = () => (
           src={logop}
           className="rounded mx-auto d-block"
           alt="..."
-          width={150}
+          width={80}
         />
       </div>
       <div className="col" style={{ backgroundColor: "#eee7ce" }}>
@@ -48,52 +48,91 @@ export const Agenda = () => (
         <br></br>
         <div className="container">
           <div className="row align-items-start">
-            <div className="col-2 justify-content-end">
+            <div className="col-2 justify-content-end" >
+              
               <img
                 src={Fac}
                 className="rounded mx-auto d-block"
                 alt="..."
-                width={20}
+                width={80}
+                
               />
             </div>
             <div className="col-4 justify-content-start">
-            <a href="https://www.facebook.com/BienestarCentroMedico" target="_blank" rel="noopener noreferrer" className="card-link fw-bold redes">Facebook</a>
+              <button 
+              target="_blank"
+              rel="noopener noreferrer"
+                href="https://www.facebook.com/BienestarCentroMedico"
+                type="button" 
+                className="btn card-link fw-bold redes text-secondary rounded-sm"
+                style={{ backgroundColor: "#064439" }} 
+                >Facebook
+              </button>
+       
             </div>
-            <div className="col-2">
-            <img
+            <div className="col-2 justify-content-end">
+              <img
                 src={Inst}
                 className="rounded mx-auto d-block"
                 alt="..."
-                width={20}
+                width={80}
               />
             </div>
             <div className="col-4">
-            <a href="https://www.instagram.com/BienestarCentroMedico" target="_blank" rel="noopener noreferrer" className="card-link fw-bold redes">Instagram</a>
+            <button 
+              target="_blank"
+              rel="noopener noreferrer"
+                href="https://www.instagram.com/BienestarCentroMedico"
+                type="button" 
+                className="btn card-link fw-bold redes text-secondary rounded-sm"
+                style={{ backgroundColor: "#064439" }} 
+                >Instagram
+              </button>
+            
             </div>
           </div>
           <br></br>
           <div className="row align-items-start">
-            <div className="col-2 justify-content-end">
+            <div className="btn col-2 justify-content-end">
               <img
                 src={Twi}
                 className="rounded mx-auto d-block"
                 alt="..."
-                width={20}
+                width={80}
               />
             </div>
             <div className="col-4 justify-content-start">
-            <a href="https://www.twiter.com/BienestarCentroMedico" target="_blank" rel="noopener noreferrer" className="card-link fw-bold redes">Twiter</a>
-            </div>
+
+            <button 
+              target="_blank"
+              rel="noopener noreferrer"
+                href="https://www.twiter.com/BienestarCentroMedico"
+                type="button" 
+                className="btn card-link fw-bold redes text-secondary rounded-sm"
+                style={{ backgroundColor: "#064439" }} 
+                >Twitter
+              </button>
+
+             </div>
             <div className="col-2">
             <img
                 src={Tele}
                 className="rounded mx-auto d-block"
                 alt="..."
-                width={20}
+                width={80}
               />
             </div>
             <div className="col-4">
-            <a href="https://www.telegram.com/BienestarCentroMedico" target="_blank" rel="noopener noreferrer" className="card-link fw-bold redes">Telegram</a>
+            <button 
+              target="_blank"
+              rel="noopener noreferrer"
+                href="https://www.telegram.com/BienestarCentroMedico"
+                type="button" 
+                className="btn  card-link fw-bold redes text-secondary rounded-sm"
+                style={{ backgroundColor: "#064439" }} 
+                >Telegram
+              </button>
+              
             </div>
           </div>
         </div>

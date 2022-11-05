@@ -13,6 +13,9 @@ import UserProfileEdit from "./views/userprofileedit";
 import PerfilUsuario from "./views/perfilusuario";
 import { Medicos } from "./views/medicos";
 
+import { Success } from "./views/success";
+import { Pending } from "./views/pending";
+
 import {Recuperar} from "./views/recuperar"
 import { Recuperar2 } from "./views/recuperar2";
 
@@ -25,6 +28,7 @@ import { Navbar } from "./component/navbar";
 import { Especie } from "./component/especie";
 import { Footer } from "./component/footer";
 import { Agenda } from "./component/agenda";
+
 
 
 
@@ -76,6 +80,12 @@ const Layout = () => {
             </Route>
              <Route exact path="/calendario">
 						<Calendario />
+            </Route>
+             <Route exact path="/success">
+						  <Success />
+						</Route>
+             <Route exact path="/pending">
+						  <Pending />
 						</Route>
             <Route>
               <NotFound />
