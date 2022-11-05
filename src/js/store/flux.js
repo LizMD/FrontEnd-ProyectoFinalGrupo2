@@ -215,8 +215,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				  },
 				  redirect: "follow",
 				};
-				console.log("store",JSON.stringify(store,null,2))
-				console.log("store",store.Usuario)
 				fetch(
 					`https://3000-bairon00-repobackproyec-0eotej8lkr9.ws-us74.gitpod.io/user/${store.Usuario?.user?.id}/edit`,
 				  requestOptions
