@@ -11,7 +11,7 @@
     font-size: .9em !important
 }
 .redes:hover {
-color: white !important;
+color: #032b23 !important;
 }
 .dropdown {
     background-color: #eee7ce;
@@ -32,4 +32,20 @@ color: white !important;
   }
 .altoletra {
     height: 70px;
+}
+.colorbutton{
+    background-Color: #ded4b1;
+    box-shadow: 0px 5px 5px 0px #053a31;
+    
+}
+.colorbutton:active{
+    background-color: #cbbf91;
+    box-shadow: 1px 5px 5px 1px #5a8e8e;
+
+}
+.text-letra{
+    color: #064439
+}
+.colorholder{
+    color: black
 }

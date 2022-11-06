@@ -64,8 +64,9 @@ export const Agenda = () => (
               rel="noopener noreferrer"
                 href="https://www.facebook.com/BienestarCentroMedico"
                 type="button" 
-                className="btn-sm card-link fw-bold redes text-secondary rounded-sm"
-                style={{ backgroundColor: "#064439" }} 
+                className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton"
+                
+                
                 >Facebook
               </button>
        
@@ -84,8 +85,7 @@ export const Agenda = () => (
               rel="noopener noreferrer"
                 href="https://www.instagram.com/BienestarCentroMedico"
                 type="button" 
-                className="btn-sm card-link fw-bold redes text-secondary rounded-sm"
-                style={{ backgroundColor: "#064439" }} 
+                className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton"
                 >Instagram
               </button>
             
@@ -110,8 +110,7 @@ export const Agenda = () => (
               rel="noopener noreferrer"
                 href="https://www.twiter.com/BienestarCentroMedico"
                 type="button" 
-                className="btn-sm card-link fw-bold redes text-secondary rounded-sm"
-                style={{ backgroundColor: "#064439" }} 
+                className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton"
                 >Twitter
               </button>
        
@@ -130,8 +129,7 @@ export const Agenda = () => (
               rel="noopener noreferrer"
                 href="https://www.telegram.com/BienestarCentroMedico"
                 type="button" 
-                className="btn-sm card-link fw-bold redes text-secondary rounded-sm"
-                style={{ backgroundColor: "#064439" }} 
+                className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton"
                 >Telegram
               </button>
             
