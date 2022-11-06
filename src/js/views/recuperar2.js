@@ -16,13 +16,9 @@ export const Recuperar2 = () => {
   };
   return (
     <div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <div className="row justify-content-center">
-        <div className="col-6">
+  
+  <div className="row justify-content-center altura">
+        <div className="col-6 mt-5">
           <div>
             <div style={{ width: "600px" }} className="container">
               <form>
@@ -65,11 +61,7 @@ export const Recuperar2 = () => {
                 </Button>
               </form>
             </div>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
+
           </div>
         </div>
       </div>

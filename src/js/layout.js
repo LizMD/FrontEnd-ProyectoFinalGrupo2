@@ -15,6 +15,7 @@ import { Medicos } from "./views/medicos";
 
 import { Success } from "./views/success";
 import { Pending } from "./views/pending";
+import { Rechazado } from "./views/rechazado";
 
 import {Recuperar} from "./views/recuperar"
 import { Recuperar2 } from "./views/recuperar2";
@@ -86,6 +87,9 @@ const Layout = () => {
 						</Route>
              <Route exact path="/pending">
 						  <Pending />
+              </Route>
+              <Route exact path="/rechazado">
+						  <Rechazado />
 						</Route>
             <Route>
               <NotFound />

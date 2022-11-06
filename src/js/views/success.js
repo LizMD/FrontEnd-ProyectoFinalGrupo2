@@ -13,15 +13,15 @@ export const Success=()=>{
     
     return(
         
-        <div style={{height: "500px"}}>
-            <br></br>
-            <br></br>
-            <br></br>
+        <div className="altura">
+           
             <Box textAlign="center" py={10} px={6}>
       <br></br>
       <br></br>
       <Heading
-        
+      className="altoletra"
+        display="inline-block"
+        as="h2"
         bgGradient="linear(to-r, green.500, green.800)"
         backgroundClip="text">
         Su pago fue agendado exitosamente!

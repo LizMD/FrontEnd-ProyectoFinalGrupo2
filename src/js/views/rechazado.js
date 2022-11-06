@@ -8,14 +8,14 @@ import { Link } from "react-router-dom";
 
 
 
-export const Pending=()=>{
+export const Rechazado=()=>{
     
     //const pay = () => alert("vas a pagar")
     
     return(
         
         <div className="altura">
-            <Box textAlign="center" py={10} px={6}>
+            <Box textAlign="center" py={10} px={10}>
       <br></br>
       <br></br>
       <Heading
@@ -24,7 +24,7 @@ export const Pending=()=>{
         as="h2"
         bgGradient="linear(to-r, green.500, green.800)"
         backgroundClip="text">
-        Su pago se encueentra pendiente!!
+        Su pago fue rechazado!!
       </Heading>
         <br></br>
         <br></br>

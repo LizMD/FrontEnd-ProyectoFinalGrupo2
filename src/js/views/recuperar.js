@@ -20,7 +20,7 @@ export const Recuperar = () => {
       <div className="row justify-content-center altura">
         <div className="col-6 mt-5">
           <div>
-            <div style={{ width: "600px" }} className="container">
+            <div className="container ">
               <form>
                 <div className="form-group mt-5 ">
                   <Heading
