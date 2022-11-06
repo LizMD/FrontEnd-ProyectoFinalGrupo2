@@ -1,26 +1,33 @@
 import React from "react";
+import "../../styles/home.css";
+
+
+
 import { Box, Heading, Text, Button } from '@chakra-ui/react';
 import { Link } from "react-router-dom";
 
-export default function NotFound() {
-  return (
-    <Box textAlign="center" className="altura" py={10} px={6}>
+
+
+export const Pending=()=>{
+    
+    //const pay = () => alert("vas a pagar")
+    
+    return(
+        
+        <div className="altura">
+            <Box textAlign="center" py={10} px={6}>
       <br></br>
-     
+      <br></br>
       <Heading
+      className="altoletra"
         display="inline-block"
         as="h2"
-        size="2xl"
         bgGradient="linear(to-r, green.500, green.800)"
         backgroundClip="text">
-        404
+        Su pago se encueentra pendiente!!
       </Heading>
-      <Text fontSize="18px" mt={3} mb={2}>
-        Página no encontrada
-      </Text>
-      <Text color={'gray.500'} mb={6}>
-        La página que estás buscando no existe
-      </Text>
+        <br></br>
+        <br></br>
       <Link to="/">
       <Button
         colorScheme="green"
@@ -29,10 +36,13 @@ export default function NotFound() {
         variant="solid">
         Volver al Inicio
       </Button>
-      
-      
-
       </Link>
     </Box>
-  );
+      
+            
+         
+  
+
+        </div>
+    )
 }

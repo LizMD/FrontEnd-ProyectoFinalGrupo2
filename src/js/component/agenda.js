@@ -48,54 +48,103 @@ export const Agenda = () => (
         <br></br>
         <div className="container">
           <div className="row align-items-start">
-            <div className="col-2 justify-content-end">
+            <div className="col-2 justify-content-end" >
+              
               <img
                 src={Fac}
                 className="rounded mx-auto d-block"
                 alt="..."
-                width={20}
+                width={30}
+                
               />
             </div>
             <div className="col-4 justify-content-start">
-            <a href="https://www.facebook.com/BienestarCentroMedico" target="_blank" rel="noopener noreferrer" className="card-link fw-bold redes">Facebook</a>
+              <button 
+              target="_blank"
+              rel="noopener noreferrer"
+                href="https://www.facebook.com/BienestarCentroMedico"
+                type="button" 
+                className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton"
+                
+                
+                >Facebook
+              </button>
+       
             </div>
-            <div className="col-2">
-            <img
+            <div className="col-2 justify-content-end p-b-20">
+              <img
                 src={Inst}
                 className="rounded mx-auto d-block"
                 alt="..."
-                width={20}
+                width={30}
               />
             </div>
             <div className="col-4">
-            <a href="https://www.instagram.com/BienestarCentroMedico" target="_blank" rel="noopener noreferrer" className="card-link fw-bold redes">Instagram</a>
+            <button 
+              target="_blank"
+              rel="noopener noreferrer"
+                href="https://www.instagram.com/BienestarCentroMedico"
+                type="button" 
+                className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton"
+                >Instagram
+              </button>
+            
             </div>
           </div>
           <br></br>
+          
           <div className="row align-items-start">
-            <div className="col-2 justify-content-end">
+            <div className="col-2 justify-content-end" >
+              
               <img
                 src={Twi}
                 className="rounded mx-auto d-block"
                 alt="..."
-                width={20}
+                width={30}
+                
               />
             </div>
             <div className="col-4 justify-content-start">
-            <a href="https://www.twiter.com/BienestarCentroMedico" target="_blank" rel="noopener noreferrer" className="card-link fw-bold redes">Twiter</a>
+              <button 
+              target="_blank"
+              rel="noopener noreferrer"
+                href="https://www.twiter.com/BienestarCentroMedico"
+                type="button" 
+                className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton"
+                >Twitter
+              </button>
+       
             </div>
-            <div className="col-2">
-            <img
+            <div className="col-2 justify-content-end">
+              <img
                 src={Tele}
                 className="rounded mx-auto d-block"
                 alt="..."
-                width={20}
+                width={30}
               />
             </div>
             <div className="col-4">
-            <a href="https://www.telegram.com/BienestarCentroMedico" target="_blank" rel="noopener noreferrer" className="card-link fw-bold redes">Telegram</a>
+            <button 
+              target="_blank"
+              rel="noopener noreferrer"
+                href="https://www.telegram.com/BienestarCentroMedico"
+                type="button" 
+                className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton"
+                >Telegram
+              </button>
+            
             </div>
           </div>
+
+
+
+
+
+
+
+
+
+    
         </div>
         <br></br>
         
