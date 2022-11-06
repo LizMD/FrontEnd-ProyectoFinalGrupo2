@@ -24,3 +24,9 @@ color: white !important;
 .dropdown .dropdown-menu .dropdown-item:hover{
     background-color: #064439;   
 }
+.altura{
+    height: 400px;
+}
+.mt-5 {
+    margin-top: 1px;
+  }

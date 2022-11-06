@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 export default function NotFound() {
   return (
-    <Box textAlign="center" py={10} px={6}>
+    <Box textAlign="center" className="altura" py={10} px={6}>
       <br></br>
-      <br></br>
+     
       <Heading
         display="inline-block"
         as="h2"
@@ -29,6 +29,9 @@ export default function NotFound() {
         variant="solid">
         Volver al Inicio
       </Button>
+      
+      
+
       </Link>
     </Box>
   );

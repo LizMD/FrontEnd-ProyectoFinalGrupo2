@@ -13,9 +13,7 @@ export class Calendario extends React.Component {
     return (
       <div>
         <InlineWidget url="https://calendly.com/lorehuincahue/30min"
-        styles={{
-            height: '500px',
-        }}
+        className= "altura"
         pageSettings={{
           backgroundColor: 'ffffff',
           hideEventTypeDetails: false,

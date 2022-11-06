@@ -13,7 +13,8 @@ import {
 export default function ForgotPasswordCard() { 
   return ( 
     <Flex 
-      minH={"100vh"} 
+    className="altura"
+      minH={"50vh"} 
       align={"center"} 
       justify={"center"} 
       bg={useColorModeValue("gray.50", "gray.800")} 

@@ -16,17 +16,13 @@ export const Recuperar = () => {
   };
   return (
     <div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <div className="row justify-content-center">
-        <div className="col-6">
+      
+      <div className="row justify-content-center altura">
+        <div className="col-6 mt-5">
           <div>
             <div style={{ width: "600px" }} className="container">
               <form>
-                <div className="form-group ">
+                <div className="form-group mt-5 ">
                   <Heading
                     bgGradient="linear(to-r, green.500, green.800)"
                     backgroundClip="text"
@@ -65,11 +61,6 @@ export const Recuperar = () => {
                 </Button>
               </form>
             </div>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
           </div>
         </div>
       </div>
