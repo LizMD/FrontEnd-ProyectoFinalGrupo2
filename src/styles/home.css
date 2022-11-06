@@ -49,3 +49,21 @@ color: #032b23 !important;
 .colorholder{
     color: black
 }
+.marges {
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  }
+.fonnav {
+    background-color: #064439;
+}
+.colorbuttonnav{
+    background-Color: #ded4b1;
+    box-shadow: 0px 5px 5px 0px #fdfdfd;
+    
+}
+.colorbuttonnav:active{
+    background-color: #cbbf91;
+    box-shadow: 1px 5px 5px 1px #5a8e8e;
+
+}

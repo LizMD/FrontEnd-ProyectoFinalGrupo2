@@ -17,19 +17,20 @@ export const Navbar = () => {
   } */
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-success"
-      style={{ backgroundColor: "#064439" }}
+      className="navbar navbar-expand-lg navbar-success fonnav"
+      
     >
       <div className="container-fluid">
         <div className="justify-content-start" style={{ marginLeft: "80px" }}>
           <Link to="/">
-            <button
-              type="button"
-              className="btn btn-sm fw-bold"
-              style={{ backgroundColor: "#eee7ce", marginRight: "15px" }}
-            >
-              Inicio
-            </button>
+          <button 
+              target="_blank"
+              rel="noopener noreferrer"
+                href="https://www.telegram.com/BienestarCentroMedico"
+                type="button" 
+                className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbuttonnav"
+                >Inicio
+              </button>
           </Link>
         </div>
         <div className="justify-content-center">
@@ -53,14 +54,14 @@ export const Navbar = () => {
           {localStorage.getItem("Token")?(
 
           <button type="button"
-          className="btn btn-sm fw-bold"
-          style={{ backgroundColor: "#eee7ce", marginRight: "15px" }} onClick={()=>actions.aa(history)}>Cerrar sesion</button>
+          className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbuttonnav"
+          style={{ marginRight: "15px" }} onClick={()=>actions.aa(history)}>Cerrar sesion</button>
           ):(
 
             <div className="justify-content-end" style={{ marginRight: "80px" }}>
           <div className="rounded-3 border border-2 dropdown">
             <a
-              className="btn btn-sm fw-bold rounded-3 border border-2"
+              className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbuttonnav"
               href="#"
               role="button"
               id="dropdownMenuLink"
