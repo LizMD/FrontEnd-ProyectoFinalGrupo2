@@ -58,17 +58,20 @@ export const Agenda = () => (
                 
               />
             </div>
+
             <div className="col-4 justify-content-start">
+              <a  href="https://www.facebook.com/BienestarCentroMedico">
               <button 
               target="_blank"
               rel="noopener noreferrer"
-                href="https://www.facebook.com/BienestarCentroMedico"
                 type="button" 
                 className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton"
-                
-                
+                   
                 >Facebook
               </button>
+
+              </a>
+              
        
             </div>
             <div className="col-2 justify-content-end p-b-20">
@@ -80,14 +83,16 @@ export const Agenda = () => (
               />
             </div>
             <div className="col-4">
-            <button 
-              target="_blank"
-              rel="noopener noreferrer"
-                href="https://www.instagram.com/BienestarCentroMedico"
-                type="button" 
-                className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton"
-                >Instagram
-              </button>
+              <a href="https://www.instagram.com/BienestarCentroMedico">
+                <button 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                    
+                    type="button" 
+                    className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton"
+                    >Instagram
+                  </button>
+              </a>
             
             </div>
           </div>
@@ -105,14 +110,15 @@ export const Agenda = () => (
               />
             </div>
             <div className="col-4 justify-content-start">
+            <a  href="https://www.twiter.com/BienestarCentroMedico">
               <button 
-              target="_blank"
-              rel="noopener noreferrer"
-                href="https://www.twiter.com/BienestarCentroMedico"
+                target="_blank"
+                rel="noopener noreferrer"
                 type="button" 
                 className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton"
                 >Twitter
               </button>
+            </a>
        
             </div>
             <div className="col-2 justify-content-end">
@@ -124,14 +130,17 @@ export const Agenda = () => (
               />
             </div>
             <div className="col-4">
+
+            <a href="https://www.telegram.com/BienestarCentroMedico">
             <button 
-              target="_blank"
-              rel="noopener noreferrer"
-                href="https://www.telegram.com/BienestarCentroMedico"
+                target="_blank"
+                rel="noopener noreferrer"
                 type="button" 
                 className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton"
                 >Telegram
               </button>
+
+            </a>
             
             </div>
           </div>
