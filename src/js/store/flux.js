@@ -27,7 +27,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			getMedicos: () => {
 				const store = getStore();
-				fetch("https://3000-bairon00-repobackproyec-0eotej8lkr9.ws-us74.gitpod.io/medicos")
+
+				fetch("https://3000-bairon00-repobackproyec-xptl8ztkrv9.ws-us74.gitpod.io/medicos")
+
 					.then(response => response.json())
 					.then(result => setStore({ Medicos: result }))
 					.catch(error => console.log('error', error));
