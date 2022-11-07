@@ -16,6 +16,9 @@ import {
   IconButton,
   Center,
   Link,
+  List,
+  ListItem,
+  Text,
 } from "@chakra-ui/react";
 import { AiFillCloseCircle } from "react-icons/ai";
 
@@ -50,18 +53,32 @@ export default function PerfilUsuario() {
         <Heading lineHeight={1.1} fontSize={{ base: "2xl", sm: "3xl" }}>
           Información del Usuario
         </Heading>
-        <FormControl id="Nombre">
-          <FormLabel>Nombre:{store.Usuario.user?.name}</FormLabel>
-        </FormControl>
-        <FormControl id="Apellido">
-          <FormLabel>Apellido:{store.Usuario.user?.last_name}</FormLabel>
-        </FormControl>
-        <FormControl id="email">
-          <FormLabel>Correo Electrónico:{store.Usuario.user?.email}</FormLabel>
-        </FormControl>
-        <FormControl id="Previsión">
-          <FormLabel>Previsión:{store.Usuario.user?.prevision}</FormLabel>
-        </FormControl>
+        <List spacing={2}>
+                <ListItem>
+                  <Text as={'span'} fontWeight={'bold'}>
+                    Nombre:
+                  </Text>{' '}
+                  {store.Usuario.user?.name}
+                </ListItem>
+                <ListItem>
+                  <Text as={'span'} fontWeight={'bold'}>
+                    Apellido:
+                  </Text>{' '}
+                  {store.Usuario.user?.last_name}
+                </ListItem>
+                <ListItem>
+                  <Text as={'span'} fontWeight={'bold'}>
+                    Correo Electrónico:
+                  </Text>{' '}
+                  {store.Usuario.user?.email}
+                </ListItem>
+                <ListItem>
+                  <Text as={'span'} fontWeight={'bold'}>
+                    Previsión:
+                  </Text>{' '}
+                  {store.Usuario.user?.prevision}
+                </ListItem>
+        </List>
         <Stack spacing={6}>
           <Stack spacing={6}>
           <Link as={RouterLink} to="/userprofileedit">
@@ -81,3 +98,4 @@ export default function PerfilUsuario() {
     </Flex>
   );
 }
+
