@@ -24,7 +24,7 @@ export const Agenda = () => (
             width={3}
           />
           <br></br>
-          <div className=" margin-left-7 text-white fw-bold fs-7">
+          <div className=" margin-left-7 text-white fs-7">
             <p className="fs-7">Santiago Av. Manquehue Sur 350.</p>
               <p className="fs-7">Las Condes R.M.</p>
             <p className="fs-7">P: +56 (9) 7284 8039</p>
