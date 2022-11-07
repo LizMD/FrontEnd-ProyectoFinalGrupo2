@@ -22,15 +22,14 @@ export const Navbar = () => {
     >
       <div className="container-fluid">
         <div className="justify-content-start" style={{ marginLeft: "80px" }}>
-          <Link to="/">
-          <button 
-              target="_blank"
-              rel="noopener noreferrer"
-                href="https://www.telegram.com/BienestarCentroMedico"
-                type="button" 
-                className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbuttonnav"
-                >Inicio
-              </button>
+        <Link to="/">
+            <button
+              type="button"
+              className="btn-sm card-link fw-bold redes text-letra rounded-sm"
+              style={{ backgroundColor: "#eee7ce", marginRight: "15px" }}
+            >
+              Inicio
+            </button>
           </Link>
         </div>
         <div className="justify-content-center">
@@ -44,8 +43,8 @@ export const Navbar = () => {
                   width={30}
                 />
               </div>
-              <div className="col-9 text-white d-flex align-items-center">
-                Bienestar Centro Médico
+              <div className="col-9 text-white d-flex align-items-center fw-bold">
+                BIENESTAR CENTRO MÉDICO
               </div>
             </div>
           </div>
@@ -54,14 +53,14 @@ export const Navbar = () => {
           {localStorage.getItem("Token")?(
 
           <button type="button"
-          className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbuttonnav"
+          className="btn-sm card-link fw-bold redes text-letra rounded-sm"
           style={{ marginRight: "15px" }} onClick={()=>actions.aa(history)}>Cerrar sesion</button>
           ):(
 
             <div className="justify-content-end" style={{ marginRight: "80px" }}>
           <div className="rounded-3 border border-2 dropdown">
             <a
-              className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbuttonnav"
+              className="btn-sm card-link fw-bold redes text-letra rounded-sm"
               href="#"
               role="button"
               id="dropdownMenuLink"
