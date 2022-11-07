@@ -2,7 +2,7 @@ import React ,{ useState,useEffect,useContext} from "react";
 import { InlineWidget } from "react-calendly";
 import { useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
-import { Medicos } from "./medicos";
+
 
 
 export const Calendario=()=>{
@@ -10,10 +10,12 @@ export const Calendario=()=>{
   const params = useParams("");
   const [medico, setMedico] = useState({})
   useEffect(()=>{
+    console.log(store.Medicos)
     store.Medicos.map((obj,index)=>{
       if(obj.name==params.name){
       setMedico(obj)
       }
+      
     })
   })
     return (

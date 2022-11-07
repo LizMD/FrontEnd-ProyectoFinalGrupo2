@@ -16,7 +16,7 @@ export const CardMedicos = (props) => {
                     <h6 style={{marginBottom:"8px",marginLeft:"4px"}}>{props.especialidad}</h6>
           
                 </div>
-                <Link to={"/cardmedicos1" /* + { nombre } */}>
+                <Link to={"/calendario/"+props.nombre }>
                     <button className=" efecto2 col-12 rounded" style={{ marginTop: "0px", height: "30px", border: "none", width: "100%", color: "white" }}>Reserva tu hora </button>
                 </Link>
             </div>
