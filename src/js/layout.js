@@ -74,7 +74,7 @@ const Layout = () => {
             <Route exact path="/perfilusuario">
 							<PerfilUsuario />
             </Route>
-             <Route exact path="/calendario">
+             <Route exact path="/calendario/:name">
 						<Calendario />
 						</Route>
             <Route>

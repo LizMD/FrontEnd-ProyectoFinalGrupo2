@@ -1,14 +1,21 @@
-import React from "react";
+import React ,{ useState,useEffect,useContext} from "react";
 import { InlineWidget } from "react-calendly";
+import { useParams } from "react-router-dom";
+import { Context } from "../store/appContext";
+import { Medicos } from "./medicos";
 
-export class Calendario extends React.Component {
-  componentDidMount() {
-    // whatever stuff you need here
-  }
-  componentWillUnmount() {
-    // whatever cleanup stuff you need here
-  }
-  render(){
+export const Calendario=()=>{
+  const { store, actions } = useContext(Context);
+  const params = useParams("");
+  const [medico, setMedico] = useState({})
+  useEffect(()=>{
+    store.Medicos.map((obj,index)=>{
+      if(obj.name==params.name){
+      setMedico(obj)
+      }
+    })
+  })
+  
     return (
       <div>
         <InlineWidget url="https://calendly.com/lorehuincahue/30min"
@@ -25,7 +32,8 @@ export class Calendario extends React.Component {
           Width: '200px'
         }}     
         />
+        <button>{"pagar"+medico.valor}</button>
       </div>
     );
-  }
-}
+  
+      }
