@@ -11,9 +11,7 @@ export const Especie = () => {
       
       <Link to="/Medicos/Cosmetología">
             <button
-              type="button"
-              className="btn btn-sm fw-bold"
-              style={{ backgroundColor: "#eee7ce", marginRight: "15px" }}
+               className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges"
             >
               Cosmetología
 
@@ -21,9 +19,7 @@ export const Especie = () => {
           </Link>
           <Link to="/Medicos/Dermatología">
             <button
-              type="button"
-              className="btn btn-sm fw-bold"
-              style={{ backgroundColor: "#eee7ce", marginRight: "15px" }}
+               className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges"
             >
               Dermatología
 
@@ -32,8 +28,7 @@ export const Especie = () => {
           <Link to="/Medicos/Nutrición">
             <button
               type="button"
-              className="btn btn-sm fw-bold"
-              style={{ backgroundColor: "#eee7ce", marginRight: "15px" }}
+              className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges"
             >
               Nutrición
 
@@ -41,9 +36,7 @@ export const Especie = () => {
           </Link>
           <Link to="/Medicos/Psicología">
             <button
-              type="button"
-              className="btn btn-sm fw-bold"
-              style={{ backgroundColor: "#eee7ce", marginRight: "15px" }}
+              className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges"
             >
               Psicología
 
@@ -51,9 +44,7 @@ export const Especie = () => {
           </Link>
           <Link to="/Medicos/Psiquiatría">
             <button
-              type="button"
-              className="btn btn-sm fw-bold"
-              style={{ backgroundColor: "#eee7ce", marginRight: "15px" }}
+               className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges"
             >
               Psiquiatría
 

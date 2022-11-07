@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { Medicos } from "./medicos";
 
+
 export const Calendario=()=>{
   const { store, actions } = useContext(Context);
   const params = useParams("");
@@ -15,13 +16,10 @@ export const Calendario=()=>{
       }
     })
   })
-  
     return (
       <div>
         <InlineWidget url="https://calendly.com/lorehuincahue/30min"
-        styles={{
-            height: '500px',
-        }}
+        className= "altura"
         pageSettings={{
           backgroundColor: 'ffffff',
           hideEventTypeDetails: false,

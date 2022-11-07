@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
 import {
   Button,
@@ -14,6 +14,10 @@ import {
 
 export default function UserProfileEdit(props) {
   const { store, actions } = useContext(Context);
+
+  useEffect(()=>{
+    console.log('store', store)
+  },[])
 
   return (
     <Flex

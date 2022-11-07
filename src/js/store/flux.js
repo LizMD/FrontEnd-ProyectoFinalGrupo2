@@ -27,7 +27,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			getMedicos: () => {
 				const store = getStore();
+
 				fetch("https://3000-bairon00-repobackproyec-xptl8ztkrv9.ws-us74.gitpod.io/medicos")
+
 					.then(response => response.json())
 					.then(result => setStore({ Medicos: result }))
 					.catch(error => console.log('error', error));
@@ -45,7 +47,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				  };
 				  
-				fetch("https://3000-bairon00-repobackproyec-0cs7sqa6bai.ws-us72.gitpod.io/user/"+localStorage.getItem("Email"))
+				fetch("https://3000-bairon00-repobackproyec-0eotej8lkr9.ws-us74.gitpod.io/user/"+localStorage.getItem("Email"))
 					.then(response => response.json())
 					.then(result => localStorage.setItem("pass",result))
 					.catch(error => console.log('error', error));
@@ -66,7 +68,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-bairon00-repobackproyec-0cs7sqa6bai.ws-us72.gitpod.io/login", requestOptions)
+				fetch("https://3000-bairon00-repobackproyec-0eotej8lkr9.ws-us74.gitpod.io/login", requestOptions)
 					.then(response => response.json())
 					.then(result => {
 						localStorage.setItem("Token", result.token)
@@ -93,7 +95,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-bairon00-repobackproyec-0cs7sqa6bai.ws-us72.gitpod.io/perfil", requestOptions)
+				fetch("https://3000-bairon00-repobackproyec-0eotej8lkr9.ws-us74.gitpod.io/perfil", requestOptions)
 					.then(response => response.json())
 					.then(result => {
 						if (result.user) {
@@ -161,7 +163,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				};
 		
 				fetch(
-				  "https://3000-bairon00-repobackproyec-0cs7sqa6bai.ws-us72.gitpod.io/register",
+				  "https://3000-bairon00-repobackproyec-0eotej8lkr9.ws-us74.gitpod.io/register",
 				  requestOptions
 				)
 				  .then((response) => response.json())
@@ -215,9 +217,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				  },
 				  redirect: "follow",
 				};
-		
 				fetch(
-				  "https://3000-bairon00-repobackproyec-yv9484774m8.ws-us72.gitpod.io/user/1/edit",
+					`https://3000-bairon00-repobackproyec-0eotej8lkr9.ws-us74.gitpod.io/user/${store.Usuario?.user?.id}/edit`,
 				  requestOptions
 				)
 				  .then((response) => response.json())

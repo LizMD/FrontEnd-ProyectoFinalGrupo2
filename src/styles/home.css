@@ -8,10 +8,10 @@
     object-position: center center !important;
 }
 .fs-7 {
-    font-size: .7em !important
+    font-size: .9em !important
 }
 .redes:hover {
-color: white !important;
+color: #032b23 !important;
 }
 .dropdown {
     background-color: #eee7ce;
@@ -23,4 +23,47 @@ color: white !important;
 }
 .dropdown .dropdown-menu .dropdown-item:hover{
     background-color: #064439;   
+}
+.altura{
+    height: 430px;
+}
+.mt-5 {
+    margin-top: 1px;
+  }
+.altoletra {
+    height: 70px;
+}
+.colorbutton{
+    background-Color: #ded4b1;
+    box-shadow: 0px 5px 5px 0px #053a31;
+    
+}
+.colorbutton:active{
+    background-color: #cbbf91;
+    box-shadow: 1px 5px 5px 1px #5a8e8e;
+
+}
+.text-letra{
+    color: #064439
+}
+.colorholder{
+    color: black
+}
+.marges {
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  }
+.fonnav {
+    background-color: #064439;
+}
+.colorbuttonnav{
+    background-Color: #ded4b1;
+    box-shadow: 0px 5px 5px 0px #fdfdfd;
+    
+}
+.colorbuttonnav:active{
+    background-color: #cbbf91;
+    box-shadow: 1px 5px 5px 1px #5a8e8e;
+
 }
