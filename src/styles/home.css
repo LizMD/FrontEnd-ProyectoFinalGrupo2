@@ -27,6 +27,9 @@ color: #032b23 !important;
 .altura{
     height: 430px;
 }
+.altura1{
+    height: 330px;
+}
 .mt-5 {
     margin-top: 1px;
   }
@@ -66,4 +69,7 @@ color: #032b23 !important;
     background-color: #cbbf91;
     box-shadow: 1px 5px 5px 1px #5a8e8e;
 
+}
+.marg1{
+    margin-top: 50px;
 }
