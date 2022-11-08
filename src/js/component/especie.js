@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Context } from "../store/appContext";
 import logo from "../../img/logopequeño.jpg";
 import { Link } from "react-router-dom";
 import "../../styles/home.css";
 
+
 export const Especie = () => {
+  const [selectedColor, setSelectedColor] = useState("");
   return (
+    
     <nav className="navbar justify-content-center"
       style={{ backgroundColor: "#e2dfce" }}>
       
       <Link to="/Medicos/Cosmetología">
             <button
-               className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges"
+            onClick={()=>setSelectedColor("rosado")}
+               className={"btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges rosado1 "+ (selectedColor === "rosado" ? " rosado" : "")}
             >
               Cosmetología
 
@@ -19,7 +23,8 @@ export const Especie = () => {
           </Link>
           <Link to="/Medicos/Dermatología">
             <button
-               className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges"
+            onClick={()=>setSelectedColor("azul")}
+               className={"btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges azul1 "+ (selectedColor === "azul" ? "azul" : "")}
             >
               Dermatología
 
@@ -27,8 +32,9 @@ export const Especie = () => {
           </Link>
           <Link to="/Medicos/Nutrición">
             <button
-              type="button"
-              className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges"
+            onClick={()=>setSelectedColor("morado")}
+             
+              className={"btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges morado1 "+ (selectedColor === "morado" ? "morado" : "")}
             >
               Nutrición
 
@@ -36,7 +42,8 @@ export const Especie = () => {
           </Link>
           <Link to="/Medicos/Psicología">
             <button
-              className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges"
+            onClick={()=>setSelectedColor("verde")}
+              className={"btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges verde1 "+ (selectedColor === "verde" ? "verde" : "")}
             >
               Psicología
 
@@ -44,13 +51,13 @@ export const Especie = () => {
           </Link>
           <Link to="/Medicos/Psiquiatría">
             <button
-               className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges"
+            onClick={()=>setSelectedColor("blanco")}
+               className={"btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges blanco1 "+ (selectedColor === "blanco" ? "blanco" : "")}
             >
               Psiquiatría
 
             </button>
           </Link>
-      
     </nav>
   );
 };
