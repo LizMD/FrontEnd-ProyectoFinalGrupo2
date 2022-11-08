@@ -10,6 +10,7 @@ export const Calendario=()=>{
   const params = useParams("");
   const [medico, setMedico] = useState({})
   useEffect(()=>{
+    console.log(store.Pago)
     console.log(store.Medicos)
     store.Medicos.map((obj,index)=>{
       if(obj.name==params.name){
@@ -34,6 +35,7 @@ export const Calendario=()=>{
         />
         <button>{"pagar"+medico.valor}</button>
       </div>
-    );
-  
+    );    
       }
+
+      

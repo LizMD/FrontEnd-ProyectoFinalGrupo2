@@ -1,255 +1,276 @@
 const getState = ({ getStore, getActions, setStore }) => {
+  return {
+    store: {
+      Rec: {},
+      Usuario: {},
+      Medicos: [],
+      name: "",
+      last_name: "",
+      email: "",
+      prevision: "",
+      password: "",
+      Pago: [],
 
-	return {
-		store: {
-			Rec:{},
-			Usuario: {},
-			Medicos: [],
-			name: "",
-			last_name: "",
-			email: "",
-			prevision: "",
-			password: "",
+      demo: [
+        {
+          title: "FIRST",
+          background: "white",
+          initial: "white",
+        },
+        {
+          title: "SECOND",
+          background: "white",
+          initial: "white",
+        },
+      ],
+    },
+    actions: {
+      getMedicos: () => {
+        const store = getStore();
 
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
-		},
-		actions: {
-			getMedicos: () => {
-				const store = getStore();
+        fetch(
+          "https://3000-bairon00-repobackproyec-sr7v50arzw1.ws-us74.gitpod.io/medicos"
+        )
+          .then((response) => response.json())
+          .then((result) => setStore({ Medicos: result }))
+          .catch((error) => console.log("error", error));
+      },
+      recuperar: (email, history) => {
+        localStorage.setItem("Email", email);
+        history.push("recuperar2");
+      },
+      clave: () => {
+        var raw = "";
+        var requestOptions = {
+          method: "GET",
+          body: raw,
+          redirect: "follow",
+        };
 
-				fetch("https://3000-bairon00-repobackproyec-sr7v50arzw1.ws-us74.gitpod.io/medicos")
+        fetch(
+          "https://3000-bairon00-repobackproyec-0eotej8lkr9.ws-us74.gitpod.io/user/" +
+            localStorage.getItem("Email")
+        )
+          .then((response) => response.json())
+          .then((result) => localStorage.setItem("pass", result))
+          .catch((error) => console.log("error", error));
+      },
+      verificacion: (email, password) => {
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
 
-					.then(response => response.json())
-					.then(result => setStore({ Medicos: result }))
-					.catch(error => console.log('error', error));
-			},
-			recuperar:(email,history)=>{
-				localStorage.setItem("Email",email)
-				history.push("recuperar2")
+        var raw = JSON.stringify({
+          email: email,
+          password: password,
+        });
 
-			},
-			clave:()=>{
-				var raw = "";
-				var requestOptions = {
-					method: 'GET',
-					body: raw,
-					redirect: 'follow'
-				  };
-				  
-				fetch("https://3000-bairon00-repobackproyec-0eotej8lkr9.ws-us74.gitpod.io/user/"+localStorage.getItem("Email"))
-					.then(response => response.json())
-					.then(result => localStorage.setItem("pass",result))
-					.catch(error => console.log('error', error));
-			},
-			verificacion: (email, password) => {
-				var myHeaders = new Headers();
-				myHeaders.append("Content-Type", "application/json");
+        var requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: raw,
+          redirect: "follow",
+        };
 
-				var raw = JSON.stringify({
-					"email": email,
-					"password": password
-				});
+        fetch(
+          "https://3000-bairon00-repobackproyec-0eotej8lkr9.ws-us74.gitpod.io/login",
+          requestOptions
+        )
+          .then((response) => response.json())
+          .then((result) => {
+            localStorage.setItem("Token", result.token);
+            if (localStorage.getItem("Token")) {
+              window.location.href = "/perfilusuario";
+            } else {
+              alert("datos incorrectos");
+            }
+          })
+          .catch((error) => console.log("error", error));
+      },
+      usuario: () => {
+        var myHeaders = new Headers();
+        myHeaders.append(
+          "Authorization",
+          "Bearer " + localStorage.getItem("Token")
+        );
 
-				var requestOptions = {
-					method: 'POST',
-					headers: myHeaders,
-					body: raw,
-					redirect: 'follow'
-				};
+        var requestOptions = {
+          method: "GET",
+          headers: myHeaders,
+          redirect: "follow",
+        };
 
-				fetch("https://3000-bairon00-repobackproyec-0eotej8lkr9.ws-us74.gitpod.io/login", requestOptions)
-					.then(response => response.json())
-					.then(result => {
-						localStorage.setItem("Token", result.token)
-						if (localStorage.getItem("Token")) {
-							window.location.href = "/perfilusuario"
-						}
-						else {
-							alert("datos incorrectos")
-						}
+        fetch(
+          "https://3000-bairon00-repobackproyec-0eotej8lkr9.ws-us74.gitpod.io/perfil",
+          requestOptions
+        )
+          .then((response) => response.json())
+          .then((result) => {
+            if (result.user) {
+              setStore({ Usuario: result });
+            } else {
+              localStorage.removeItem("Token");
+              window.location.href = "/";
+            }
+          })
+          .catch((error) => console.log("error", error));
+      },
+      // Use getActions to call a function within a fuction
+      exampleFunction: () => {
+        getActions().changeColor(0, "green");
+      },
+      aa: (history) => {
+        setStore({ Usuario: {} });
+        localStorage.removeItem("Token");
+        history.push("/");
+      },
 
+      cerrar: () => {
+        const store = getStore();
+        localStorage.clear();
+        setStore({ Usuario: { ...store.Usuario, is_active: false } });
+        console.log(store.Usuario.active);
+      },
+      handleChange: (e) => {
+        const { name, value } = e.target;
+        setStore({ [name]: value });
+      },
+      registrarse: (e, history) => {
+        e.preventDefault();
+        const store = getStore();
+        if (
+          !store.name ||
+          !store.last_name ||
+          !store.email ||
+          !store.prevision ||
+          !store.password
+        ) {
+          setStore({
+            error: "Debe completar todos los campos",
+          });
+          return;
+        }
+        const raw = JSON.stringify({
+          name: store.name,
+          last_name: store.last_name,
+          email: store.email,
+          prevision: store.prevision,
+          password: store.password,
+        });
 
-					})
-					.catch(error => console.log('error', error));
+        var requestOptions = {
+          method: "POST",
+          body: raw,
+          headers: {
+            "content-type": "application/json",
+          },
+          redirect: "follow",
+        };
 
+        fetch(
+          "https://3000-bairon00-repobackproyec-0eotej8lkr9.ws-us74.gitpod.io/register",
+          requestOptions
+        )
+          .then((response) => response.json())
+          .then((result) => {
+            if (result.registrarse) {
+              setStore({ Registrarse: result });
+            } else {
+              setStore({
+                currentUser: raw,
+                isAuthenticated: true,
+                email: null,
+                password: null,
+                name: null,
+                last_name: null,
+                prevision: null,
+              });
+              sessionStorage.setItem("currentUser", JSON.stringify(raw));
+              sessionStorage.setItem("isAuthenticated", true);
+              alert("Usuario Registrado");
+              window.location.href = "/logincard";
+            }
+          })
+          .catch((error) => console.log("error", error));
+      },
+      editUserProfile: (e, history) => {
+        e.preventDefault();
+        const store = getStore();
+        if (
+          !store.name ||
+          !store.last_name ||
+          !store.email ||
+          !store.prevision ||
+          !store.password
+        ) {
+          alert("Faltan datos");
+          return;
+        }
+        const raw = JSON.stringify({
+          email: store.email,
+          password: store.password,
+          name: store.name,
+          last_name: store.last_name,
+          prevision: store.prevision,
+        });
+        var requestOptions = {
+          method: "PUT",
+          body: raw,
+          headers: {
+            "content-type": "application/json",
+          },
+          redirect: "follow",
+        };
+        fetch(
+          `https://3000-bairon00-repobackproyec-0eotej8lkr9.ws-us74.gitpod.io/user/${store.Usuario?.user?.id}/edit`,
+          requestOptions
+        )
+          .then((response) => response.json())
+          .then((result) => {
+            if (result.editUserProfile) {
+              setStore({ editUserProfile: result });
+            } else {
+              setStore({
+                name: null,
+                last_name: null,
+                email: null,
+                prevision: null,
+                password: null,
+              });
+              alert("Usuario Editado");
+              window.location.href = "/perfilusuario";
+            }
+          })
+          .catch((error) => console.log("error", error));
+      },
 
-			},
-			usuario: () => {
-				var myHeaders = new Headers();
-				myHeaders.append("Authorization", "Bearer " + localStorage.getItem("Token"));
+      Pago: (name, valor, especialidad) => {
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
 
-				var requestOptions = {
-					method: 'GET',
-					headers: myHeaders,
-					redirect: 'follow'
-				};
+        var raw = JSON.stringify({
+          name: name,
+          valor: parseInt(valor),
+          especialidad: especialidad,
+        });
 
-				fetch("https://3000-bairon00-repobackproyec-0eotej8lkr9.ws-us74.gitpod.io/perfil", requestOptions)
-					.then(response => response.json())
-					.then(result => {
-						if (result.user) {
-							setStore({ Usuario: result })
-						} else {
-							localStorage.removeItem("Token")
-							window.location.href = "/"
+        var requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: raw,
+          redirect: "follow",
+        };
 
-						}
+        fetch(
+          "https://3000-bairon00-repobackproyec-sr7v50arzw1.ws-us74.gitpod.io/api/preference",
+          requestOptions
+        )
+          .then((response) => response.json())
+          .then((result) => setStore({ Pago: result }))
+          .catch((error) => console.log("error", error));
+      },
 
-					})
-					.catch(error => console.log('error', error));
-			},
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
-			},
-			aa: (history) => {
-				setStore({ Usuario: {} })
-				localStorage.removeItem("Token")
-				history.push("/")
-
-			},
-
-			cerrar: () => {
-				const store = getStore();
-				localStorage.clear()
-				setStore({ Usuario: { ...store.Usuario, is_active: false } })
-				console.log(store.Usuario.active)
-			},
-			handleChange: (e) => {
-				const { name, value } = e.target;
-				setStore({ [name]: value });
-			},
-			registrarse: (e, history) => {
-				e.preventDefault();
-				const store = getStore();
-				if (
-				  !store.name ||
-				  !store.last_name ||
-				  !store.email ||
-				  !store.prevision ||
-				  !store.password
-				) {
-				  setStore({
-					error: "Debe completar todos los campos",
-				  });
-				  return;
-				}
-				const raw = JSON.stringify({
-				  name: store.name,
-				  last_name: store.last_name,
-				  email: store.email,
-				  prevision: store.prevision,
-				  password: store.password,
-				});
-		
-				var requestOptions = {
-				  method: "POST",
-				  body: raw,
-				  headers: {
-					"content-type": "application/json",
-				  },
-				  redirect: "follow",
-				};
-		
-				fetch(
-				  "https://3000-bairon00-repobackproyec-0eotej8lkr9.ws-us74.gitpod.io/register",
-				  requestOptions
-				)
-				  .then((response) => response.json())
-				  .then((result) => {
-					if (result.registrarse) {
-					  setStore({ Registrarse: result });
-					} else {
-					  setStore({
-						currentUser: raw,
-						isAuthenticated: true,
-						email: null,
-						password: null,
-						name: null,
-						last_name: null,
-						prevision: null,
-					  });
-					  sessionStorage.setItem("currentUser", JSON.stringify(raw));
-					  sessionStorage.setItem("isAuthenticated", true);
-					  alert("Usuario Registrado");
-					  window.location.href = "/logincard";
-					}
-		
-				  })
-				  .catch((error) => console.log("error", error));
-			  },
-			  editUserProfile: (e, history) => {
-				e.preventDefault();
-				const store = getStore();
-				if (
-				  !store.name ||
-				  !store.last_name ||
-				  !store.email ||
-				  !store.prevision ||
-				  !store.password
-				) {
-				  alert("Faltan datos");
-				  return;
-				}
-				const raw = JSON.stringify({
-				  email: store.email,
-				  password: store.password,
-				  name: store.name,
-				  last_name: store.last_name,
-				  prevision: store.prevision,
-				});
-				var requestOptions = {
-				  method: "PUT",
-				  body: raw,
-				  headers: {
-					"content-type": "application/json",
-				  },
-				  redirect: "follow",
-				};
-				fetch(
-					`https://3000-bairon00-repobackproyec-0eotej8lkr9.ws-us74.gitpod.io/user/${store.Usuario?.user?.id}/edit`,
-				  requestOptions
-				)
-				  .then((response) => response.json())
-				  .then((result) => {
-					if (result.editUserProfile) {
-					  setStore({ editUserProfile: result });
-					} else {
-					  setStore({
-						name: null,
-						last_name: null,
-						email: null,
-						prevision: null,
-						password: null,
-					  });
-					  alert("Usuario Editado");
-					  window.location.href = "/perfilusuario";
-					}
-				  })
-				  .catch((error) => console.log("error", error));
-			  },
-
-
-
-
-
-
-
-
-
-			loadSomeData: () => {
-				/**
+      loadSomeData: () => {
+        /**
 
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/

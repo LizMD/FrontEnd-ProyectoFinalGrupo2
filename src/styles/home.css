@@ -11,21 +11,24 @@
     font-size: .9em !important
 }
 .redes:hover {
-color: #032b23 !important;
+color: #032B23 !important;
 }
 .dropdown {
-    background-color: #eee7ce;
+    background-color: #EEE7CE;
 }
 .dropdown .dropdown-menu {
-    background-color: #eee7ce;
+    background-color: #EEE7CE;
     color:white;
     text-decoration-color: white;
 }
 .dropdown .dropdown-menu .dropdown-item:hover{
-    background-color: #064439;   
+    background-color: #064439;
 }
 .altura{
     height: 430px;
+}
+.altura1{
+    height: 330px;
 }
 .mt-5 {
     margin-top: 1px;
@@ -34,14 +37,12 @@ color: #032b23 !important;
     height: 70px;
 }
 .colorbutton{
-    background-Color: #ded4b1;
-    box-shadow: 0px 5px 5px 0px #053a31;
-    
+    background-Color: #DED4B1;
+    box-shadow: 0px 5px 5px 0px #053A31;
 }
 .colorbutton:active{
-    background-color: #cbbf91;
-    box-shadow: 1px 5px 5px 1px #5a8e8e;
-
+    background-color: #CBBF91;
+    box-shadow: 1px 5px 5px 1px #5A8E8E;
 }
 .text-letra{
     color: #064439
@@ -58,12 +59,13 @@ color: #032b23 !important;
     background-color: #064439;
 }
 .colorbuttonnav{
-    background-Color: #ded4b1;
-    box-shadow: 0px 5px 5px 0px #fdfdfd;
-    
+    background-Color: #DED4B1;
+    box-shadow: 0px 5px 5px 0px #FDFDFD;
 }
 .colorbuttonnav:active{
-    background-color: #cbbf91;
-    box-shadow: 1px 5px 5px 1px #5a8e8e;
-
+    background-color: #CBBF91;
+    box-shadow: 1px 5px 5px 1px #5A8E8E;
+}
+.marg1{
+    margin-top: 50px;
 }
