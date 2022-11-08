@@ -16,21 +16,54 @@ export const Recuperar = () => {
   };
   return (
     <div>
+      
+      <div className="row justify-content-center altura">
+        <div className="col-6 mt-5">
+          <div>
+            <div className="container ">
+              <form>
+                <div className="form-group mt-5 ">
+                  <Heading
+                    bgGradient="linear(to-r, green.500, green.800)"
+                    backgroundClip="text"
+                  >
+                    <label for="exampleInputEmail1">Correo Electronico</label>
+                  </Heading>
 
-                    <div><div style={{ height: "500px" }} className="container">
-                    <form >
-                        <div class="form-group ">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email"  onChange={bb} required/>
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                        </div>
-                     
-                        <button type="submit" class="btn btn-primary" onClick={()=>actions.recuperar(email.email,history)} >Submit</button>
-                        
-                    </form>
+                  <br></br>
+
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    placeholder="Coloca Tu Correo"
+                    name="email"
+                    onChange={bb}
+                  />
+                  <br></br>
+                  <small id="emailHelp" className="form-text text-muted">
+                    Nunca compartiremos tu correo electrónico con nadie más.
+                  </small>
+                  <br></br>
+                  <br></br>
                 </div>
-                </div>
-                
+            
+                <Button
+                  type="submit"
+                  colorScheme="green"
+                  bgGradient="linear(to-r, green.600, green.700, green.800)"
+                  color="white"
+                  variant="solid"
+                  onClick={() => actions.recuperar(email.email, history)}
+                >
+                  Enviar
+                </Button>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
   );
 };
