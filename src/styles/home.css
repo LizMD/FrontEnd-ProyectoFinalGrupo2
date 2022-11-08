@@ -50,7 +50,12 @@ color: #032B23 !important;
 .center2{
     justify-content: space-around;
     align-items: center;
-    padding-top: 15px;
+    padding-top: 15px; 
+}
+.center3{
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 300px;
     
 }
 .mt-5 {
@@ -92,3 +97,22 @@ color: #032B23 !important;
 .marg1{
     margin-top: 50px;
 }
+.colorbutton2{
+    background-Color: #DED4B1;
+    
+}
+.colorbutton2:active{
+    background-color: #CBBF91;
+    box-shadow: 1px 1px 1px 1px #5A8E8E;
+    
+    
+}
+.colorbutton2:hover{
+    background-color:#b9ab73 ;
+}
+.botonpago1{
+    justify-content: flex-end
+    }
+.espaciob{
+    margin-bottom: 0px;
+}    
