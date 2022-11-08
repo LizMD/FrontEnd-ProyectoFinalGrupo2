@@ -47,6 +47,12 @@ color: #032B23 !important;
     padding-top: 5px;
     
 }
+.center2{
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 15px;
+    
+}
 .mt-5 {
     margin-top: 1px;
   }

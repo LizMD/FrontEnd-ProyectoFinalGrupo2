@@ -23,8 +23,8 @@ export const Agenda = () => (
             alt="..."
             width={3}
           />
-          <br></br>
-          <div className=" margin-left-7 text-white fs-7">
+          
+          <div className=" margin-left-7 text-white fs-7 center2">
             <p className="fs-7">Santiago Av. Manquehue Sur 350.</p>
               <p className="fs-7">Las Condes R.M.</p>
             <p className="fs-7">P: +56 (9) 7284 8039</p>
@@ -32,7 +32,7 @@ export const Agenda = () => (
           </div>
         </div>
       </div>
-      <div className="col-4" style={{ backgroundColor: "#064439" }}>
+      <div className="col-4 center2" style={{ backgroundColor: "#064439" }}>
         <br></br>
         <img
           src={logop}
