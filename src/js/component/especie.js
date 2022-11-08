@@ -15,7 +15,7 @@ export const Especie = () => {
       <Link to="/Medicos/Cosmetología">
             <button
             onClick={()=>setSelectedColor("rosado")}
-               className={"btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges "+ (selectedColor === "rosado" ? " rosado" : "")}
+               className={"btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges rosado1 "+ (selectedColor === "rosado" ? " rosado" : "")}
             >
               Cosmetología
 
@@ -24,7 +24,7 @@ export const Especie = () => {
           <Link to="/Medicos/Dermatología">
             <button
             onClick={()=>setSelectedColor("azul")}
-               className={"btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges "+ (selectedColor === "azul" ? "azul" : "")}
+               className={"btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges azul1 "+ (selectedColor === "azul" ? "azul" : "")}
             >
               Dermatología
 
@@ -34,7 +34,7 @@ export const Especie = () => {
             <button
             onClick={()=>setSelectedColor("morado")}
              
-              className={"btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges "+ (selectedColor === "morado" ? "morado" : "")}
+              className={"btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges morado1 "+ (selectedColor === "morado" ? "morado" : "")}
             >
               Nutrición
 
@@ -43,7 +43,7 @@ export const Especie = () => {
           <Link to="/Medicos/Psicología">
             <button
             onClick={()=>setSelectedColor("verde")}
-              className={"btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges "+ (selectedColor === "verde" ? "verde" : "")}
+              className={"btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges verde1 "+ (selectedColor === "verde" ? "verde" : "")}
             >
               Psicología
 
@@ -52,13 +52,12 @@ export const Especie = () => {
           <Link to="/Medicos/Psiquiatría">
             <button
             onClick={()=>setSelectedColor("blanco")}
-               className={"btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges "+ (selectedColor === "blanco" ? "blanco" : "")}
+               className={"btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges blanco1 "+ (selectedColor === "blanco" ? "blanco" : "")}
             >
               Psiquiatría
 
             </button>
           </Link>
-      
     </nav>
   );
 };

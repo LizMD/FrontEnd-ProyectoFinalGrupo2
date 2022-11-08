@@ -46,8 +46,10 @@ export const Navbar = () => {
             </div>
           </div>
         </div>
+        <div>
         
         {localStorage.getItem("Token") ? (
+          <>
           <button
             type="button"
             className="btn-sm card-link fw-bold redes text-letra rounded-sm"
@@ -56,6 +58,16 @@ export const Navbar = () => {
           >
             Cerrar sesion
           </button>
+          <Link to="/perfilusuario">
+          <button
+             type="button"
+             className="btn-sm card-link fw-bold redes text-letra rounded-sm"
+             style={{ backgroundColor: "#eee7ce", marginRight: "15px" }}
+           >
+             Perfil
+           </button>
+         </Link> 
+         </>
         ) : (
           <div className="justify-content-end" style={{ marginRight: "80px" }}>
             <div className="rounded-3 border border-2 dropdown">
