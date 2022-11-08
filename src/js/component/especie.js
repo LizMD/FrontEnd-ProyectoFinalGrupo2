@@ -7,7 +7,7 @@ import "../../styles/home.css";
 export const Especie = () => {
   return (
     <nav className="navbar justify-content-center"
-      style={{ backgroundColor: "#fffcf6" }}>
+      style={{ backgroundColor: "#e2dfce" }}>
       
       <Link to="/Medicos/Cosmetología">
             <button

@@ -65,7 +65,7 @@ export const Agenda = () => (
             
               rel="noopener noreferrer"
                 type="button" 
-                className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton"
+                className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton2"
                    
                 >Facebook
               </button>
@@ -89,7 +89,7 @@ export const Agenda = () => (
                   rel="noopener noreferrer"
                     
                     type="button" 
-                    className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton"
+                    className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton2"
                     >Instagram
                   </button>
               </a>
@@ -115,7 +115,7 @@ export const Agenda = () => (
                 
                 rel="noopener noreferrer"
                 type="button" 
-                className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton"
+                className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton2"
                 >Twitter
               </button>
             </a>
@@ -136,7 +136,7 @@ export const Agenda = () => (
           
                 rel="noopener noreferrer"
                 type="button" 
-                className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton"
+                className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton2"
                 >Telegram
               </button>
 

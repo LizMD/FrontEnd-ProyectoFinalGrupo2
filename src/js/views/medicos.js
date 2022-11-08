@@ -11,9 +11,9 @@ export const Medicos=()=>{
     
 
     return (
-        <div className="container color1">
+        <div className="container color1 espaciob">
+
         <div className="row">
-            <Especie></Especie>
         {store.Medicos.map((obj,index)=>{
             
             if(params.especialidad==obj.especialidad){
@@ -22,6 +22,7 @@ export const Medicos=()=>{
                 <CardMedicos
                 nombre={obj.name}
                 especialidad={obj.especialidad}
+                imagen={obj.imagen}
                 />
             )
 

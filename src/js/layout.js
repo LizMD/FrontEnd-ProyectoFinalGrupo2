@@ -53,6 +53,7 @@ const Layout = () => {
               <Demo />
             </Route>
             <Route exact path="/Medicos/:especialidad">
+            <Especie />
               <Medicos />
             </Route>
             <Route exact path="/single/:theid">
