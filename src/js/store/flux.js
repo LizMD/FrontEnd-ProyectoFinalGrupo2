@@ -10,6 +10,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			email: "",
 			prevision: "",
 			password: "",
+			Pago:[],
 
 			demo: [
 				{
@@ -47,7 +48,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				  };
 				  
-				fetch("https://3000-bairon00-repobackproyec-0eotej8lkr9.ws-us74.gitpod.io/user/"+localStorage.getItem("Email"))
+				fetch("https://3000-bairon00-repobackproyec-sr7v50arzw1.ws-us74.gitpod.io/user/"+localStorage.getItem("Email"))
 					.then(response => response.json())
 					.then(result => localStorage.setItem("pass",result))
 					.catch(error => console.log('error', error));
@@ -68,7 +69,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-bairon00-repobackproyec-0eotej8lkr9.ws-us74.gitpod.io/login", requestOptions)
+				fetch("https://3000-bairon00-repobackproyec-sr7v50arzw1.ws-us74.gitpod.io/login", requestOptions)
 					.then(response => response.json())
 					.then(result => {
 						localStorage.setItem("Token", result.token)
@@ -95,7 +96,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-bairon00-repobackproyec-0eotej8lkr9.ws-us74.gitpod.io/perfil", requestOptions)
+				fetch("https://3000-bairon00-repobackproyec-sr7v50arzw1.ws-us74.gitpod.io/perfil", requestOptions)
 					.then(response => response.json())
 					.then(result => {
 						if (result.user) {
@@ -163,7 +164,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				};
 		
 				fetch(
-				  "https://3000-bairon00-repobackproyec-0eotej8lkr9.ws-us74.gitpod.io/register",
+				  "https://3000-bairon00-repobackproyec-sr7v50arzw1.ws-us74.gitpod.io/register",
 				  requestOptions
 				)
 				  .then((response) => response.json())
@@ -218,7 +219,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				  redirect: "follow",
 				};
 				fetch(
-					`https://3000-bairon00-repobackproyec-0eotej8lkr9.ws-us74.gitpod.io/user/${store.Usuario?.user?.id}/edit`,
+					`https://3000-bairon00-repobackproyec-sr7v50arzw1.ws-us74.gitpod.io/user/${store.Usuario?.user?.id}/edit`,
 				  requestOptions
 				)
 				  .then((response) => response.json())
@@ -239,6 +240,37 @@ const getState = ({ getStore, getActions, setStore }) => {
 				  })
 				  .catch((error) => console.log("error", error));
 			  },
+			  Pago: (name, valor, especialidad) => {
+				var myHeaders = new Headers();
+				myHeaders.append("Content-Type", "application/json");
+		
+				var raw = JSON.stringify({
+				  name: name,
+				  valor: parseInt(valor),
+				  especialidad: especialidad,
+				});
+		
+				var requestOptions = {
+				  method: "POST",
+				  headers: myHeaders,
+				  body: raw,
+				  redirect: "follow",
+				};
+		
+				fetch(
+				  "https://3000-bairon00-repobackproyec-sr7v50arzw1.ws-us74.gitpod.io/api/preference",
+				  requestOptions
+				)
+				  .then((response) => response.json())
+				  .then((result) => setStore({Pago:result}))
+				  .catch((error) => console.log("error", error));
+			  },
+			  url:()=>{
+				window.location.replace="google.com"
+
+			  },
+		
+		
 
 
 
