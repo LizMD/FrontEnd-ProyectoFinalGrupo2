@@ -11,7 +11,7 @@ export const Medicos=()=>{
     
 
     return (
-        <div className="container color1 espaciob">
+        <div className="container color1 espaciob"style={{marginBottom:"50px"}}>
 
         <div className="row">
         {store.Medicos.map((obj,index)=>{

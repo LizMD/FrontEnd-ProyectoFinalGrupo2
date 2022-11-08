@@ -49,7 +49,7 @@ export default function UserProfileEdit(props) {
           <FormControl id="Nombre" isRequired>
             <FormLabel>Nombre</FormLabel>
             <Input
-              placeholder="carla"
+              placeholder="Nombre"
               _placeholder={{ color: "gray.500" }}
               type="text"
               onChange={actions.handleChange}
@@ -60,7 +60,7 @@ export default function UserProfileEdit(props) {
           <FormControl id="Nombre" isRequired>
             <FormLabel>Apellido</FormLabel>
             <Input
-              placeholder="soto"
+              placeholder="Apellido"
               _placeholder={{ color: "gray.500" }}
               type="text"
               onChange={actions.handleChange}
@@ -82,7 +82,7 @@ export default function UserProfileEdit(props) {
           <FormControl id="Previsión" isRequired>
             <FormLabel>Previsión</FormLabel>
             <Input
-              placeholder="fonasa"
+              placeholder="Previsión"
               _placeholder={{ color: "gray.500" }}
               type="text"
               onChange={actions.handleChange}
@@ -93,7 +93,7 @@ export default function UserProfileEdit(props) {
           <FormControl id="password" isRequired>
             <FormLabel>Contraseña</FormLabel>
             <Input
-              placeholder="contraseña"
+              placeholder="Contraseña"
               _placeholder={{ color: "gray.500" }}
               type="password"
               onChange={actions.handleChange}

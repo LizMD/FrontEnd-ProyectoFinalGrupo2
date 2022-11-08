@@ -94,7 +94,7 @@ export const Navbar = () => {
                     </a>
                   </li>
                 </Link>
-                <Link to="/forgotpasswordcard">
+                <Link to="/recuperar">
                   <li>
                     <a className="dropdown-item fw-bold" href="#">
                       Recuperar contraseña
