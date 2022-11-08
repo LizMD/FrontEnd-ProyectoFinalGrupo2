@@ -1,10 +1,10 @@
 import { propNames } from "@chakra-ui/react";
-import React from "react";
+import React,{ useState,useEffect,useContext} from "react";
 import { Link } from "react-router-dom";
-
+import { Context } from "../store/appContext";
 
 export const CardMedicos = (props) => {
-
+    const { store, actions } = useContext(Context);
     return (
         <div className="col-4 ">
             <div className="rounded my-3 col-7  mx-4 efecto1 ">
@@ -17,7 +17,7 @@ export const CardMedicos = (props) => {
           
                 </div>
                 <Link to={"/calendario/"+props.nombre }>
-                    <button className=" efecto2 col-12 rounded" style={{ marginTop: "0px", height: "30px", border: "none", width: "100%", color: "white" }}>Reserva tu hora </button>
+                    <button className=" efecto2 col-12 rounded" style={{ marginTop: "0px", height: "30px", border: "none", width: "100%", color: "white" }} onClick={()=>actions.Pago()}>Reserva tu hora </button>
                 </Link>
             </div>
         </div>

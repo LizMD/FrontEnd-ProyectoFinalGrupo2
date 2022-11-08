@@ -1,7 +1,8 @@
 import React ,{ useState,useEffect,useContext} from "react";
 import { InlineWidget } from "react-calendly";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
+import { useHistory } from "react-router-dom";
 
 
 
@@ -9,14 +10,18 @@ export const Calendario=()=>{
   const { store, actions } = useContext(Context);
   const params = useParams("");
   const [medico, setMedico] = useState({})
+  const history = useHistory();
   useEffect(()=>{
-    console.log(store.Medicos)
+    /* actions.Pago() */
+    console.log(store)
     store.Medicos.map((obj,index)=>{
       if(obj.name==params.name){
       setMedico(obj)
       }
       
     })
+    actions.Pago(medico.name,medico.valor,medico.especialidad)
+    console.log(store.Pago.sandbox_init_point)
   })
     return (
       <div>
@@ -32,7 +37,9 @@ export const Calendario=()=>{
           Width: '200px'
         }}     
         />
-        <button>{"pagar"+medico.valor}</button>
+        
+        <button onClick={()=>window.location.replace(store.Pago.init_point)}>{"pagar"+medico.valor}</button>
+        
       </div>
     );
   
