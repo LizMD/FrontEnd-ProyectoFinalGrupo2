@@ -12,6 +12,7 @@ export const Especie = () => {
       <Link to="/Medicos/Cosmetología">
             <button
                className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges"
+            id="cosme"
             >
               Cosmetología
 
@@ -20,6 +21,7 @@ export const Especie = () => {
           <Link to="/Medicos/Dermatología">
             <button
                className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges"
+            id="derma"
             >
               Dermatología
 
@@ -29,6 +31,7 @@ export const Especie = () => {
             <button
               type="button"
               className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges"
+            id="nutri"
             >
               Nutrición
 
@@ -37,6 +40,7 @@ export const Especie = () => {
           <Link to="/Medicos/Psicología">
             <button
               className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges"
+            id="psico"
             >
               Psicología
 
@@ -45,6 +49,7 @@ export const Especie = () => {
           <Link to="/Medicos/Psiquiatría">
             <button
                className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton marges"
+            id="psiq"
             >
               Psiquiatría
 

@@ -67,3 +67,22 @@ color: #032b23 !important;
     box-shadow: 1px 5px 5px 1px #5a8e8e;
 
 }
+
+#cosme:hover{
+    background-color: #F19E9C;
+}
+#derma:hover{
+    background-color: #081F5C;
+    color: white!important;
+}
+#nutri:hover{
+    background-color: #68349A;
+    color: white!important;
+}
+#psico:hover{
+    background-color: #123208;
+    color: white!important;
+}
+#psiq:hover{
+    background-color: #FFFFFF;
+}
