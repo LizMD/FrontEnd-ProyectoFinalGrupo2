@@ -118,20 +118,33 @@ color: #032B23 !important;
 }    
 .rosado{
     background-color: #F19E9C;
-   
-   
+}
+.rosado:hover{
+    background-color: #F19E9C;
 }
 .azul{
+    background-color: #4169d6;
+}
+.azul:hover{
     background-color: #4169d6;
 }
 .morado{
     background-color:#8951be;
    
 }
- 
+.morado:hover{
+    background-color:#8951be;
+   
+}
 .verde{
     background-color:#266613;
 }
+.verde:hover{
+    background-color:#266613;
+}
 .blanco{
+    background-color:#ffffff;
+}
+.blanco:hover{
     background-color:#ffffff;
 }
