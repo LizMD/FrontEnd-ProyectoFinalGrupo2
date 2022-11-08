@@ -60,9 +60,9 @@ export const Agenda = () => (
             </div>
 
             <div className="col-4 justify-content-start">
-              <a  href="https://www.facebook.com/BienestarCentroMedico">
+              <a  href="https://www.facebook.com/BienestarCentroMedico" target="_blank">
               <button 
-              target="_blank"
+            
               rel="noopener noreferrer"
                 type="button" 
                 className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton"
@@ -83,9 +83,9 @@ export const Agenda = () => (
               />
             </div>
             <div className="col-4">
-              <a href="https://www.instagram.com/BienestarCentroMedico">
+              <a href="https://www.instagram.com/BienestarCentroMedico" target="_blank">
                 <button 
-                  target="_blank"
+                  
                   rel="noopener noreferrer"
                     
                     type="button" 
@@ -110,9 +110,9 @@ export const Agenda = () => (
               />
             </div>
             <div className="col-4 justify-content-start">
-            <a  href="https://www.twiter.com/BienestarCentroMedico">
+            <a  href="https://www.twiter.com/BienestarCentroMedico" target="_blank">
               <button 
-                target="_blank"
+                
                 rel="noopener noreferrer"
                 type="button" 
                 className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton"
@@ -131,9 +131,9 @@ export const Agenda = () => (
             </div>
             <div className="col-4">
 
-            <a href="https://www.telegram.com/BienestarCentroMedico">
+            <a href="https://www.telegram.com/BienestarCentroMedico" target="_blank">
             <button 
-                target="_blank"
+          
                 rel="noopener noreferrer"
                 type="button" 
                 className="btn-sm card-link fw-bold redes text-letra rounded-sm colorbutton"
